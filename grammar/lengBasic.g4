@@ -3,8 +3,8 @@ grammar lengBasic;
 
 ///REGLAS
 
-begin:imports* globalThings* (main|)EOF;
-imports:'import' BIBLIOTECA ;
+begin:imports globalThings* (main|)EOF;
+imports:('import' BIBLIOTECA)* ('using''namespace''std'COT|) ;
 statement:'{' localThings*'}'  ;
 fun_statement: '{' localThings*'}' 'return' expresion ;
 globalThings:declaracion| assignmentexpression|function_declaration|void_declaration;
