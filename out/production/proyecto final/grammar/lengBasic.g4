@@ -3,17 +3,20 @@ grammar lengBasic;
 
 ///REGLAS
 
-begin:globalThings* (main|)EOF;
+begin:imports globalThings* (main|)EOF;
+imports:('import' BIBLIOTECA)* ('using''namespace''std'COT|) ;
 statement:'{' localThings*'}'  ;
 fun_statement: '{' localThings*'}' 'return' expresion ;
-globalThings:declaracion| assignmentexpression|function_declaration;
+globalThings:declaracion| assignmentexpression|function_declaration|void_declaration;
 localThings:declaracion |ciclo|assignmentexpression|desicion;
 main: 'int main' '(' ')'statement'return' '0' ;
 declaracion : simpleDeclaration|declaracion_asignacion;
-function_declaration: tipos_fun ID '('arguments')' fun_statement COT;
+void_declaration:'void' ID '(' arguments')' statement;
+function_declaration: tipos ID '('arguments')' fun_statement COT;
 declaracion_asignacion:tipos ID assignmentoperator expresion COT;
 simpleDeclaration : tipos variables COT;
 expresion:expresion_entera | expresion_decimal|expresion_logica|expresion_mat;
+
 ciclo:fOR |wHILe |do_while;
 desicion:  IF '(' expresion_logica')' statement (ELSE statement|ELSE desicion |);
 
@@ -67,9 +70,6 @@ pre_operators: ('++'|'--') ID index*;
 tipos:(pretipo tipos_con_pre|tipos_sin_pre|tipos_con_pre);
 tipos_sin_pre:'char'|'char16'|'char32'|'wchar'|'bool'|'auto'|'string';
 tipos_con_pre:'int'|'float'|'double';
-tipos_fun:(pretipo tipos_con_pre_fun|tipos_sin_pre_fun|tipos_con_pre_fun);
-tipos_sin_pre_fun:'char'|'char16'|'char32'|'wchar'|'bool'|'auto'|'void';
-tipos_con_pre_fun:'int'|'float'|'double';
 variables: (ID(','ID)*) index*;
 pretipo:  'short'| 'long'| 'signed'| 'unsigned';
 assignmentoperator   : '='| '*='| '/='| '%=' | '+='|'-='| RightShiftAssign | LeftShiftAssign | '&='| '^='| '|=';
@@ -93,6 +93,7 @@ Do:'do';
 LeftShift: '<<';
 RightShift:'>>';
 ID : [a-zA-Z_]+[0-9]* ;
+BIBLIOTECA: '"'ID'.h''"'|'<'ID'.h''>';
 ///TIPOS
 
 

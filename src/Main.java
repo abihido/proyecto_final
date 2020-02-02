@@ -10,6 +10,7 @@ public class Main extends JFrame{
 
         dibujo.Variables();
         dibujo.Funciones();
+        dibujo.MenuPrincipal();
 /*
         fortranLexer lexer;
         if (args.length>0)
