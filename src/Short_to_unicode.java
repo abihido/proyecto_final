@@ -37,13 +37,17 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterGlobalThings(lengBasicParser.GlobalThingsContext ctx) { }
+    @Override public void enterGlobalThings(lengBasicParser.GlobalThingsContext ctx) {
+
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitGlobalThings(lengBasicParser.GlobalThingsContext ctx) { }
+    @Override public void exitGlobalThings(lengBasicParser.GlobalThingsContext ctx) {
+
+    }
     /**
      * {@inheritDoc}
      *
@@ -104,7 +108,10 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitDeclaracion_asignacion(lengBasicParser.Declaracion_asignacionContext ctx) {
-        System.out.println( ctx.getText());
+        System.out.println( ctx.getChild(0).getText());
+        System.out.println( ctx.getChild(1).getText());
+        System.out.println( ctx.getChild(2).getText());
+        System.out.println( ctx.getChild(3).getText());
     }
     /**
      * {@inheritDoc}
@@ -577,4 +584,5 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void visitErrorNode(ErrorNode node) { }
+
 }

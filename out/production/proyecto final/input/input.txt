@@ -1,1 +1,3 @@
-int puto =1 ;
+int puto = 1;
+void puto (int un_puto){
+}
