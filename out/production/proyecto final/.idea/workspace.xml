@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/grammar/lengBasic.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/lengBasic.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MenuPrincial.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +96,28 @@
       <option name="project" value="LOCAL" />
       <updated>1580490633031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add imports">
+      <created>1580535149308</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580535149308</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add Function description Panel">
+      <created>1580618255577</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580618255577</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add listeners">
+      <created>1580618952951</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580618952951</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +135,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="add imports" />
+    <MESSAGE value="add Function description Panel" />
+    <MESSAGE value="add listeners" />
+    <option name="LAST_COMMIT_MESSAGE" value="add listeners" />
   </component>
 </project>

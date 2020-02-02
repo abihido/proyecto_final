@@ -7,23 +7,36 @@ import java.io.IOException;
 
 public class VarPanel extends JPanel {
     Variable Global[] = new Variable[20];
-    int actualIndex;
+    Variable Local[] = new Variable[20];
+    int GActualIndex;
+    int LActualIndex;
     BufferedImage bg = ImageIO.read(new File("input/bg.jpg"));
     public VarPanel() throws IOException {
-        addVar("iden","val",actualIndex);
+        addVarG("iden","val",GActualIndex);
+        addVarL("local","super valor ",LActualIndex);
+
     }
 
-    void addVar(String iden,String val,int i){
+    void addVarG(String iden,String val,int i){
             if(i==0){
                 Global[i]= new Variable(200,70,iden,val);
             }
             else {
                 Global[i]=new Variable(Global[i-1].x+Global[i-1].x_final+30,70,iden,val);
             }
-            actualIndex++;
+            GActualIndex++;
        //     System.out.println("inicia"+Global[i].x+"   termina"+Global[i].x_final);
     }
-
+    void addVarL(String iden,String val,int i){
+        if(i==0){
+            Local[i]= new Variable(200,350,iden,val);
+        }
+        else {
+            Local[i]=new Variable(Local[i-1].x+Local[i-1].x_final+30,350,iden,val);
+        }
+        LActualIndex++;
+        //     System.out.println("inicia"+Global[i].x+"   termina"+Global[i].x_final);
+    }
 
     void crearVariable(Graphics g, int x, int y, int xfinal, String id, String Val){
         g.setColor(Color.decode("#0D36F5"));
@@ -41,9 +54,15 @@ public class VarPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(bg,0,0,1500,600,this);
-        for(int y=0;y<5;y++) {
+        for(int y=0;y<Global.length;y++) {
             try{
                 crearVariable(g, Global[y].x, Global[y].y, Global[y].x_final, Global[y].name, Global[y].value);
+            }
+            catch (NullPointerException e){}
+        }
+        for(int y=0;y<Local.length;y++) {
+            try{
+                crearVariable(g, Local[y].x, Local[y].y, Local[y].x_final, Local[y].name, Local[y].value);
             }
             catch (NullPointerException e){}
         }
@@ -60,3 +79,10 @@ public class VarPanel extends JPanel {
         g.drawString("VARIABLES LOCALES",600,340);
     }
 }
+class showArreglo{
+
+
+
+}
+
+
