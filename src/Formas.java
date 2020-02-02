@@ -9,8 +9,9 @@ public class Formas {
 class Variable{
     int x,y,x_final;
     String name,value;
+    boolean vector;
 
-    public Variable(int x_pos,int y_pos,String nombre,Object valor){
+    public Variable(int x_pos,int y_pos,String nombre,Object valor,boolean vector){
         x=x_pos;
         y=y_pos;
         name=nombre;

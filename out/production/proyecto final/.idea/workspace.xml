@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="" />
+    <list default="true" id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/grammar/lengBasic.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/lengBasic.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VarPanel.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +22,6 @@
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1X5W2zSbmXTKydOKdDERzYcLfmI" />
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -25,7 +31,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +48,7 @@
   <component name="ProjectId" id="1VJliekKrlsn20i1aEybXOwx03k" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -71,6 +78,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
@@ -116,7 +125,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580618952951</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add Menu and var listeners">
+      <created>1580669967365</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580669967365</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit hasta llamada">
+      <created>1580672677288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580672677288</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +159,8 @@
     <MESSAGE value="add imports" />
     <MESSAGE value="add Function description Panel" />
     <MESSAGE value="add listeners" />
-    <option name="LAST_COMMIT_MESSAGE" value="add listeners" />
+    <MESSAGE value="add Menu and var listeners" />
+    <MESSAGE value="commit hasta llamada" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit hasta llamada" />
   </component>
 </project>
