@@ -12,9 +12,6 @@ public class Main extends JFrame{
     public static void main(String[] args) throws Exception{
         Printer dibujo = new Printer();
 
-        dibujo.Variables();
-        dibujo.Funciones();
-        dibujo.MenuPrincipal();
 
     }
 }

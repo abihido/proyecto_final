@@ -3,14 +3,39 @@ import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class Printer {
+
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
 
     JFrame windowVar = new JFrame("Variables");
+    VarPanel PanelVariables = new VarPanel();
+
+
     JFrame windowFun = new JFrame("Funciones");
+    FunPanel PanelFunciones = new FunPanel();
+
     JFrame Menu = new JFrame("SEE++");
+
+
+
+    public Variable[] GetLocalVariables(){
+        return PanelVariables.Local;
+    }
+
+    public Variable[] GetGlobalVariables(){
+        return PanelVariables.Global;
+    }
+
+    public void addVarGlobal(String identifier,String variable,boolean vector){
+        PanelVariables.addVarG(identifier,variable,vector);
+    }
+
+    public void addVarLocal(String identifier,String variable,boolean vector){
+        PanelVariables.addVarL(identifier,variable,vector);
+    }
+
 
     public Printer() throws IOException {
         MenuPrincipal();
@@ -110,7 +135,7 @@ public class Printer {
 
     public void Variables() throws IOException {
 
-        windowVar.add(new VarPanel());
+        windowVar.add(PanelVariables);
         windowVar.setSize(1500,600);
         windowVar.setLocationRelativeTo(null);
         windowVar.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
@@ -119,7 +144,7 @@ public class Printer {
     public void Funciones(){
 
 
-        windowFun.add(new FunPanel());
+        windowFun.add(PanelFunciones);
         windowFun.setSize(1500,600);
         windowFun.setLocationRelativeTo(null);
         windowFun.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

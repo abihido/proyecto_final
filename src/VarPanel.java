@@ -11,28 +11,30 @@ public class VarPanel extends JPanel {
     int GActualIndex;
     int LActualIndex;
     BufferedImage bg = ImageIO.read(new File("input/bg.jpg"));
+
+
     public VarPanel() throws IOException {
-        addVarG("iden","val",GActualIndex);
-        addVarL("local","super valor ",LActualIndex);
+        addVarG("iden","val",false);
+        addVarL("local","super valor ",false);
 
     }
 
-    void addVarG(String iden,String val,int i){
-            if(i==0){
-                Global[i]= new Variable(200,70,iden,val);
+    void addVarG(String iden,String val,boolean vector){
+            if(GActualIndex==0){
+                Global[GActualIndex]= new Variable(200,70,iden,val,vector);
             }
             else {
-                Global[i]=new Variable(Global[i-1].x+Global[i-1].x_final+30,70,iden,val);
+                Global[GActualIndex]=new Variable(Global[GActualIndex-1].x+Global[GActualIndex-1].x_final+30,70,iden,val,vector);
             }
             GActualIndex++;
        //     System.out.println("inicia"+Global[i].x+"   termina"+Global[i].x_final);
     }
-    void addVarL(String iden,String val,int i){
-        if(i==0){
-            Local[i]= new Variable(200,350,iden,val);
+    void addVarL(String iden,String val,boolean vector){
+        if(LActualIndex==0){
+            Local[LActualIndex]= new Variable(200,350,iden,val,vector);
         }
         else {
-            Local[i]=new Variable(Local[i-1].x+Local[i-1].x_final+30,350,iden,val);
+            Local[LActualIndex]=new Variable(Local[LActualIndex-1].x+Local[LActualIndex-1].x_final+30,350,iden,val,vector);
         }
         LActualIndex++;
         //     System.out.println("inicia"+Global[i].x+"   termina"+Global[i].x_final);

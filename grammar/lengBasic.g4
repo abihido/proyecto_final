@@ -6,7 +6,7 @@ grammar lengBasic;
 begin:imports globalThings* (main|)EOF;
 imports:('import' BIBLIOTECA)* ('using''namespace''std'COT|) ;
 statement:'{' localThings*'}'  ;
-fun_statement: '{' localThings*'}' 'return' expresion ;
+fun_statement: '{' localThings* 'return' expresion'}'  ;
 globalThings:declaracion| assignmentexpression|function_declaration|void_declaration;
 localThings:declaracion |ciclo|assignmentexpression|desicion;
 main: 'int main' '(' ')'statement'return' '0' ;
