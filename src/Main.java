@@ -15,14 +15,14 @@ public class Main extends JFrame{
         dibujo.Variables();
         dibujo.Funciones();
         dibujo.MenuPrincipal();
-/*
-        fortranLexer lexer;
+
+        lengBasicLexer lexer;
         if (args.length>0)
-            lexer = new fortranLexer(CharStreams.fromFileName(args[0]));
+            lexer = new lengBasicLexer(CharStreams.fromFileName(args[0]));
         else
-            lexer = new fortranLexer(CharStreams.fromStream(System.in));
-        CommonTokenStream tokens = new CommonTokenStream((TokenSource) lexer);
-        fortranParser parser = new fortranParser((TokenStream) tokens);
+            lexer = new lengBasicLexer(CharStreams.fromStream(System.in));
+        CommonTokenStream tokens = new CommonTokenStream(lexer);
+        lengBasicParser parser = new lengBasicParser( tokens);
         ParseTree tree = parser.begin();
 
         // Create a generic parse tree walker that can trigger callbacks
