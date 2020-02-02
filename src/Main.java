@@ -4,7 +4,6 @@ import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 import javax.swing.*;
 import java.io.IOException;
-import java.io.File;
 
 public class Main extends JFrame{
     public Main() throws IOException {
@@ -15,17 +14,16 @@ public class Main extends JFrame{
 
         dibujo.Variables();
         dibujo.Funciones();
-
-        lengBasicLexer lexer;
+        dibujo.MenuPrincipal();
+/*
+        fortranLexer lexer;
         if (args.length>0)
-            lexer = new lengBasicLexer(CharStreams.fromFileName(args[0]));
+            lexer = new fortranLexer(CharStreams.fromFileName(args[0]));
         else
-            lexer = new lengBasicLexer(CharStreams.fromStream(System.in));
-        // create a buffer of tokens pulled from the lexer
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
-        // create a parser that feeds off the tokens buffer
-        lengBasicParser parser = new lengBasicParser(tokens);
-        ParseTree tree = parser.begin(); // begin parsing at init rule
+            lexer = new fortranLexer(CharStreams.fromStream(System.in));
+        CommonTokenStream tokens = new CommonTokenStream((TokenSource) lexer);
+        fortranParser parser = new fortranParser((TokenStream) tokens);
+        ParseTree tree = parser.begin();
 
         // Create a generic parse tree walker that can trigger callbacks
         ParseTreeWalker walker = new ParseTreeWalker();

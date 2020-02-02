@@ -1,29 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e6f2a94-0cbe-4df5-a570-0a5702e527b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/META-INF/proyecto final.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasic.g4" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasic.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/proyecto final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/proyecto final.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proyecto final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto final.iml" afterDir="false" />
-    </list>
+    <list default="true" id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="ProjectId" id="1X5W2zSbmXTKydOKdDERzYcLfmI" />
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="juan" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\juanda\IdeaProjects\proyecto final\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VJliekKrlsn20i1aEybXOwx03k" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/trabajos/lenguajes/ANTLR/antlr-4.7.2-complete.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -41,12 +64,15 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="proyecto final" />
+      <option name="PROGRAM_PARAMETERS" value="input/input.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -56,12 +82,41 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2e6f2a94-0cbe-4df5-a570-0a5702e527b6" name="Default Changelist" comment="" />
-      <created>1580336233126</created>
+      <changelist id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="" />
+      <created>1576979207247</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580336233126</updated>
+      <updated>1576979207247</updated>
     </task>
+    <task id="LOCAL-00001" summary="add imports">
+      <created>1580490633031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580490633031</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add imports">
+      <created>1580535149308</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580535149308</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add Function description Panel">
+      <created>1580618255577</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580618255577</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add listeners">
+      <created>1580618952951</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580618952951</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,5 +131,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add imports" />
+    <MESSAGE value="add Function description Panel" />
+    <MESSAGE value="add listeners" />
+    <option name="LAST_COMMIT_MESSAGE" value="add listeners" />
   </component>
 </project>
