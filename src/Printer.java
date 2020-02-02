@@ -3,6 +3,10 @@ import java.io.IOException;
 
 public class Printer {
 
+
+
+
+
     public void Variables() throws IOException {
         JFrame windowVar = new JFrame("Variables");
         windowVar.add(new VarPanel());
