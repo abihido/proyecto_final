@@ -5,7 +5,15 @@ import org.antlr.v4.runtime.tree.*;
 import javax.swing.*;
 import java.io.IOException;
 public class traductor {
-    public static void main(String[] args) throws Exception{
+
+    Printer dibujo = new Printer();
+
+    public traductor() throws IOException {
+
+    }
+
+
+    public static void main(String[] args) throws IOException{
 
         lengBasicLexer lexer;
         if (args.length>0)

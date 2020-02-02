@@ -134,7 +134,6 @@ public class Printer {
 
 
     public void Variables() throws IOException {
-
         windowVar.add(PanelVariables);
         windowVar.setSize(1500,600);
         windowVar.setLocationRelativeTo(null);
@@ -142,14 +141,9 @@ public class Printer {
     }
 
     public void Funciones(){
-
-
         windowFun.add(PanelFunciones);
         windowFun.setSize(1500,600);
         windowFun.setLocationRelativeTo(null);
         windowFun.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }
-
-
-
 }
