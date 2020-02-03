@@ -95,7 +95,7 @@ LeftShift: '<<';
 RightShift:'>>';
 ID : [a-zA-Z_]+[0-9]* ;
 BIBLIOTECA: '"'ID'.h''"'|'<'ID'.h''>';
-WORD: '"'ID*'"' | CHAR ;
+WORD: '"'(ID|INT|REAL|' ')*'"';
 ///TIPOS
 
 

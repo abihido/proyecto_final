@@ -28,6 +28,18 @@ public class lengBasicBaseListener implements lengBasicListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterImports(lengBasicParser.ImportsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImports(lengBasicParser.ImportsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStatement(lengBasicParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -35,6 +47,18 @@ public class lengBasicBaseListener implements lengBasicListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStatement(lengBasicParser.StatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFun_statement(lengBasicParser.Fun_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFun_statement(lengBasicParser.Fun_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -83,6 +107,18 @@ public class lengBasicBaseListener implements lengBasicListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDeclaracion(lengBasicParser.DeclaracionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterVoid_declaration(lengBasicParser.Void_declarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVoid_declaration(lengBasicParser.Void_declarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -215,6 +251,18 @@ public class lengBasicBaseListener implements lengBasicListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExpresion_entera(lengBasicParser.Expresion_enteraContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpresion_palabra(lengBasicParser.Expresion_palabraContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpresion_palabra(lengBasicParser.Expresion_palabraContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -443,42 +491,6 @@ public class lengBasicBaseListener implements lengBasicListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTipos_con_pre(lengBasicParser.Tipos_con_preContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTipos_fun(lengBasicParser.Tipos_funContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTipos_fun(lengBasicParser.Tipos_funContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTipos_sin_pre_fun(lengBasicParser.Tipos_sin_pre_funContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTipos_sin_pre_fun(lengBasicParser.Tipos_sin_pre_funContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTipos_con_pre_fun(lengBasicParser.Tipos_con_pre_funContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTipos_con_pre_fun(lengBasicParser.Tipos_con_pre_funContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
