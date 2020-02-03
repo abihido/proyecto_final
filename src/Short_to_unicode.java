@@ -1,6 +1,9 @@
 import com.sun.glass.ui.SystemClipboard;
 import grammar.lengBasicBaseListener;
+import grammar.lengBasicLexer;
 import grammar.lengBasicParser;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.RuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -112,6 +115,7 @@ public class Short_to_unicode extends lengBasicBaseListener {
         System.out.println( ctx.getChild(1).getText());
         System.out.println( ctx.getChild(2).getText());
         System.out.println( ctx.getChild(3).getText());
+        /*System.out.println( ctx.parent.getParent());*/
     }
     /**
      * {@inheritDoc}
@@ -449,7 +453,7 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitTipos_con_pre(lengBasicParser.Tipos_con_preContext ctx) {
-        System.out.println( ctx.getText());
+        /*System.out.println( ctx.getText());*/
     }
     /**
      * {@inheritDoc}
@@ -558,7 +562,13 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitArguments(lengBasicParser.ArgumentsContext ctx) { }
+    @Override public void exitArguments(lengBasicParser.ArgumentsContext ctx) {
+        int x = ctx.children.size();
+        for(int i=0;i<x;i=i+3){
+            System.out.println(ctx.getChild(i).getText());//tipo
+            System.out.println(ctx.getChild(i+1).getText());//identificador
+        }
+    }
 
     /**
      * {@inheritDoc}

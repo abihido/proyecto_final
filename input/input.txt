@@ -1,3 +1,4 @@
 int puto = 1;
-void puto (int un_puto){
-}
+int re_puto (int xd , char p,double pito){
+return 1;
+};

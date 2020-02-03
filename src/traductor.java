@@ -29,5 +29,6 @@ public class traductor {
         // Walk the tree created during the parse, trigger callbacks
         walker.walk(new Short_to_unicode(), tree);
         System.out.println(); // print a \n after translation
+        System.out.println(tree.toStringTree(parser));
     }
 }
