@@ -97,8 +97,6 @@ class VarListener implements MouseListener{
                         JFrame windowFun = new JFrame(Global[i].name);
                         windowFun.setSize(600+Global[i].index*100, 400);
                         windowFun.add(new showArreglo(Extra[Global[i].index],Global[i].name));
-                        System.out.println(Global[i].index);
-                        System.out.println(Arrays.toString(Extra[Global[i].index]));
                         windowFun.setLocationRelativeTo(null);
                         windowFun.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                         windowFun.setVisible(true);

@@ -1,3 +1,14 @@
-int arreglo,puto,xd [5];
-int pendejo =1;
-double alo = 1.2;
+int f(int h, char cosa){
+
+return 3;
+};
+
+int cose(int g, char cosass){
+
+return 3;
+};
+
+char Nombre_super_largo_de_verdad(){
+
+return "ccc";
+};

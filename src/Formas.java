@@ -28,20 +28,21 @@ class Variable{
 
 class Funcion{
     int x,y,r;
-    String name,tipo;
+    String name,tipo,text;
     List  arguments = new ArrayList();
     List  argTypes = new ArrayList();
 
-    public Funcion(int x_pos, int y_pos,String namex,String tipox,ArrayList types,ArrayList argNames ){
+    public Funcion(int x_pos, int y_pos,String namex,String tipox,ArrayList types,ArrayList argNames,String Text){
         argTypes=types;
+        text=Text;
         arguments=argNames;
         name=namex;
         tipo=tipox;
         if(name.length()>tipo.length()){
-            r=50+2*name.length();
+            r=50+5*name.length();
         }
         else{
-            r=50+2*tipo.length();
+            r=50+5*tipo.length();
         }
 
         x=x_pos;

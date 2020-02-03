@@ -10,12 +10,16 @@ import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 
 public class Short_to_unicode extends lengBasicBaseListener {
     Printer dibujo;
+    ArrayList types=new ArrayList();
+    ArrayList argNames= new ArrayList();
     public Short_to_unicode() throws IOException {
-        System.out.println("hola");
          dibujo=new Printer();
     }
 
@@ -107,12 +111,38 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitFunction_declaration(lengBasicParser.Function_declarationContext ctx) { }
+    @Override public void exitFunction_declaration(lengBasicParser.Function_declarationContext ctx) {
+        ArrayList typesAux=new ArrayList();
+        ArrayList argNamesAux= new ArrayList();
+        String text;
+        try {
+            typesAux = (ArrayList) types.clone();
+            argNamesAux = (ArrayList) argNames.clone();
+        }
+        catch (Exception ex){
+            typesAux.add("vacio");
+            argNamesAux.add("vacio");
+        }
+        System.out.println( "function "+ctx.getChild(0).getText());
+        System.out.println("function "+ ctx.getChild(1).getText());
+        System.out.println("function "+ ctx.getChild(2).getText());
+        System.out.println( "function "+ctx.getChild(3).getText());
+        System.out.println("function "+ ctx.getChild(4).getText());
+        System.out.println("function "+ ctx.getChild(5).getText());
+
+        System.out.println(Arrays.toString(types.toArray()));
+
+        dibujo.addFunction(ctx.getChild(1).getText(),ctx.getChild(0).getText(),typesAux,argNamesAux,ctx.getChild(5).getText());
+
+    }
     /**
      * {@inheritDoc}
      *
      * <p>The default implementation does nothing.</p>
      */
+
+
+
     @Override public void enterDeclaracion_asignacion(lengBasicParser.Declaracion_asignacionContext ctx) { }
     /**
      * {@inheritDoc}
@@ -144,32 +174,70 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitSimpleDeclaration(lengBasicParser.SimpleDeclarationContext ctx) {
-        if(ctx.getText().contains("[")){//es arreglo xd
-            if(ctx.getText().contains(",")) {//contiene varias variables
-                System.out.println(ctx.getChild(0).getText());//tipo
-                int childes =ctx.getChild(1).getChildCount();
-                for(int i=0;i<childes-1;i=i+2){
-                    System.out.println(ctx.getChild(1).getChild(i).getText()); //identificadores
+        if(ctx.parent.getParent().toString().contains("[93]")){
+            if(ctx.getText().contains("[")){//es arreglo xd
+                if(ctx.getText().contains(",")) {//contiene varias variables
+                    System.out.println(ctx.getChild(0).getText());//tipo
+                    int childes =ctx.getChild(1).getChildCount();
+                    for(int i=0;i<childes-1;i=i+2){
+                        System.out.println(ctx.getChild(1).getChild(i).getText()); //identificadores
+                        dibujo.addVarGlobal(ctx.getChild(1).getChild(i).getText(),"", true);
+                    }
+                    System.out.println(ctx.getChild(1).getChild(childes-1).getChild(1).getText());//tamaño
+                }else{//SOLO DECLARA UNA
+                    System.out.println(ctx.getChild(0).getText());//tipo
+                    System.out.println(ctx.getChild(1).getChild(0).getText()); //identificadores
+                    System.out.println(ctx.getChild(1).getChild(1).getChild(1).getText());//tamaño
+                    dibujo.addVarGlobal(ctx.getChild(1).getChild(0).getText(),"", true);
                 }
-                System.out.println(ctx.getChild(1).getChild(childes-1).getChild(1).getText());//tamaño
-            }else{//SOLO DECLARA UNA
-                System.out.println(ctx.getChild(0).getText());//tipo
-                System.out.println(ctx.getChild(1).getChild(0).getText()); //identificadores
-                System.out.println(ctx.getChild(1).getChild(1).getChild(1).getText());//tamaño
+            }else{//no es arreglo xd
+                if(ctx.getText().contains(",")) {//contiene varias variables
+                    System.out.println(ctx.getChild(0).getText());//tipo
+                    int variables=ctx.getChild(1).getChildCount();
+                    for(int i=0;i<variables;i=i+2){
+                        System.out.println(ctx.getChild(1).getChild(i).getText());//identificadores
+                        dibujo.addVarGlobal(ctx.getChild(1).getChild(i).getText(),"", false);
+                    }
+                }else{
+                    System.out.println(ctx.getChild(0).getText());//tipo
+                    System.out.println(ctx.getChild(1).getText());//identificador
+                    dibujo.addVarGlobal(ctx.getChild(1).getText(),"", false);
+                }
             }
-        }else{//no es arreglo xd
-            if(ctx.getText().contains(",")) {//contiene varias variables
-                System.out.println(ctx.getChild(0).getText());//tipo
-                int variables=ctx.getChild(1).getChildCount();
-                for(int i=0;i<variables;i=i+2){
-                    System.out.println(ctx.getChild(1).getChild(i).getText());//identificadores
+        }
+        else{
+            if(ctx.getText().contains("[")){//es arreglo xd
+                if(ctx.getText().contains(",")) {//contiene varias variables
+                    System.out.println(ctx.getChild(0).getText());//tipo
+                    int childes =ctx.getChild(1).getChildCount();
+                    for(int i=0;i<childes-1;i=i+2){
+                        System.out.println(ctx.getChild(1).getChild(i).getText()); //identificadores
+                        dibujo.addVarLocal(ctx.getChild(1).getChild(i).getText(),"", true);
+                    }
+                    System.out.println(ctx.getChild(1).getChild(childes-1).getChild(1).getText());//tamaño
+                }else{//SOLO DECLARA UNA
+                    System.out.println(ctx.getChild(0).getText());//tipo
+                    System.out.println(ctx.getChild(1).getChild(0).getText()); //identificadores
+                    System.out.println(ctx.getChild(1).getChild(1).getChild(1).getText());//tamaño
+                    dibujo.addVarLocal(ctx.getChild(1).getChild(0).getText(),"", true);
                 }
-            }else{
-                System.out.println(ctx.getChild(0).getText());//tipo
-                System.out.println(ctx.getChild(1).getText());//identificador
+            }else{//no es arreglo xd
+                if(ctx.getText().contains(",")) {//contiene varias variables
+                    System.out.println(ctx.getChild(0).getText());//tipo
+                    int variables=ctx.getChild(1).getChildCount();
+                    for(int i=0;i<variables;i=i+2){
+                        System.out.println(ctx.getChild(1).getChild(i).getText());//identificadores
+                        dibujo.addVarLocal(ctx.getChild(1).getChild(i).getText(),"", false);
+                    }
+                }else{
+                    System.out.println(ctx.getChild(0).getText());//tipo
+                    System.out.println(ctx.getChild(1).getText());//identificador
+                    dibujo.addVarLocal(ctx.getChild(1).getText(),"", false);
+                }
             }
         }
     }
+
     /**
      * {@inheritDoc}
      *
@@ -569,10 +637,26 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitArguments(lengBasicParser.ArgumentsContext ctx) {
-        int x = ctx.children.size();
+        types.clear();
+        argNames.clear();
+        int x;
+        try {
+            x= ctx.children.size();
+        }
+        catch (Exception ex2){
+            x=0;
+        }
         for(int i=0;i<x;i=i+3){
             System.out.println(ctx.getChild(i).getText());//tipo
             System.out.println(ctx.getChild(i+1).getText());//identificador
+            try {
+                types.add(ctx.getChild(i).getText());
+                argNames.add(ctx.getChild(i + 1).getText());
+            }
+            catch (Exception ex){
+                types.add("vacio");
+                argNames.add("vacio");
+            }
         }
     }
 

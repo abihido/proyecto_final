@@ -9,7 +9,7 @@ statement:'{' localThings*'}'  ;
 fun_statement: '{' localThings* 'return' expresion COT'}'  ;
 globalThings:declaracion| assignmentexpression|function_declaration|void_declaration;
 localThings:declaracion |ciclo|assignmentexpression|desicion;
-main: 'int main' '(' ')'statement'return' '0' ;
+main: 'int main' '(' ')'fun_statement;
 declaracion : simpleDeclaration|declaracion_asignacion;
 void_declaration:'void' ID '(' arguments')' statement;
 function_declaration: tipos ID '('arguments')' fun_statement COT;

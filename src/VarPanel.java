@@ -18,10 +18,7 @@ public class VarPanel extends JPanel {
 
 
     public VarPanel() throws IOException {
-        addVarG("iden","val",false);
-        addVarG("vector","",true);
-        addVarL("local","super valor ",false);
-        addExtra(ExtraIndex-1,"yo que se" );
+
         addMouseListener(mouse);
 
     }

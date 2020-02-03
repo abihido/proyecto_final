@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Printer {
 
@@ -36,6 +37,9 @@ public class Printer {
         PanelVariables.addVarL(identifier,variable,vector);
     }
 
+    public void addFunction(String name, String tipo, ArrayList types, ArrayList argNames, String s){
+        PanelFunciones.addFuncion(name,tipo,types,argNames,s);
+    }
 
     public Printer() throws IOException {
         MenuPrincipal();
@@ -115,7 +119,7 @@ public class Printer {
                                 .addGap(91, 91, 91))
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
+        Menu.setResizable(false);
         Menu.pack();
     }
 
@@ -137,6 +141,7 @@ public class Printer {
         windowVar.add(PanelVariables);
         windowVar.setSize(1500,600);
         windowVar.setLocationRelativeTo(null);
+        windowVar.setResizable(false);
         windowVar.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
     }
 
@@ -144,6 +149,7 @@ public class Printer {
         windowFun.add(PanelFunciones);
         windowFun.setSize(1500,600);
         windowFun.setLocationRelativeTo(null);
+        windowFun.setResizable(false);
         windowFun.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }
 }

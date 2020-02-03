@@ -161,43 +161,43 @@ public interface lengBasicVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpresion_mat(lengBasicParser.Expresion_matContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#logicalandexpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitLogicalandexpression(lengBasicParser.LogicalandexpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#logicalorexpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitLogicalorexpression(lengBasicParser.LogicalorexpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#equalityexpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitEqualityexpression(lengBasicParser.EqualityexpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#andexpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitAndexpression(lengBasicParser.AndexpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#exclusiveorexpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitExclusiveorexpression(lengBasicParser.ExclusiveorexpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#inclusiveorexpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitInclusiveorexpression(lengBasicParser.InclusiveorexpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#relationalexpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
@@ -209,13 +209,13 @@ public interface lengBasicVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitShiftoperator(lengBasicParser.ShiftoperatorContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#mulriplicacion}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitMulriplicacion(lengBasicParser.MulriplicacionContext ctx);
 	/**
-	 * Visit a parse tree produced by .
+	 * Visit a parse tree produced by {@link lengBasicParser#adicion}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
