@@ -1,4 +1,1 @@
-int puto = 1;
-int re_puto (int xd , char p,double pito){
-return 1;
-};
+int arreglo,puto,xd [5];
