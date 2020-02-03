@@ -24,7 +24,8 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterBegin(lengBasicParser.BeginContext ctx) { }
+    @Override public void enterBegin(lengBasicParser.BeginContext ctx) {
+    }
     /**
      * {@inheritDoc}
      *
@@ -142,7 +143,33 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitSimpleDeclaration(lengBasicParser.SimpleDeclarationContext ctx) { }
+    @Override public void exitSimpleDeclaration(lengBasicParser.SimpleDeclarationContext ctx) {
+        if(ctx.getText().contains("[")){//es arreglo xd
+            if(ctx.getText().contains(",")) {//contiene varias variables
+                System.out.println(ctx.getChild(0).getText());//tipo
+                int childes =ctx.getChild(1).getChildCount();
+                for(int i=0;i<childes-1;i=i+2){
+                    System.out.println(ctx.getChild(1).getChild(i).getText()); //identificadores
+                }
+                System.out.println(ctx.getChild(1).getChild(childes-1).getChild(1).getText());//tamaño
+            }else{//SOLO DECLARA UNA
+                System.out.println(ctx.getChild(0).getText());//tipo
+                System.out.println(ctx.getChild(1).getChild(0).getText()); //identificadores
+                System.out.println(ctx.getChild(1).getChild(1).getChild(1).getText());//tamaño
+            }
+        }else{//no es arreglo xd
+            if(ctx.getText().contains(",")) {//contiene varias variables
+                System.out.println(ctx.getChild(0).getText());//tipo
+                int variables=ctx.getChild(1).getChildCount();
+                for(int i=0;i<variables;i=i+2){
+                    System.out.println(ctx.getChild(1).getChild(i).getText());//identificadores
+                }
+            }else{
+                System.out.println(ctx.getChild(0).getText());//tipo
+                System.out.println(ctx.getChild(1).getText());//identificador
+            }
+        }
+    }
     /**
      * {@inheritDoc}
      *
