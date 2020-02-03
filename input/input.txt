@@ -1,1 +1,3 @@
 int arreglo,puto,xd [5];
+int pendejo =1;
+double alo = 1.2;

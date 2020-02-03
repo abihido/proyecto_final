@@ -24,7 +24,8 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterBegin(lengBasicParser.BeginContext ctx) { }
+    @Override public void enterBegin(lengBasicParser.BeginContext ctx) {
+    }
     /**
      * {@inheritDoc}
      *
