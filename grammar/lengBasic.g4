@@ -15,7 +15,7 @@ void_declaration:'void' ID '(' arguments')' statement;
 function_declaration: tipos ID '('arguments')' fun_statement COT;
 declaracion_asignacion:tipos ID assignmentoperator expresion COT;
 simpleDeclaration : tipos variables COT;
-expresion:expresion_entera | expresion_decimal|expresion_logica|expresion_mat|expresion_palabra;
+expresion:expresion_entera | expresion_decimal|expresion_logica|expresion_mat|expresion_palabra|function;
 
 ciclo:fOR |wHILe |do_while;
 desicion:  IF '(' expresion_logica')' statement (ELSE statement|ELSE desicion |);
@@ -23,7 +23,7 @@ desicion:  IF '(' expresion_logica')' statement (ELSE statement|ELSE desicion |)
 wHILe: WHile '(' expresion_logica ')' statement;
 do_while: Do statement WHile '(' expresion_logica ')' COT;
 fOR: FOR'(' (simpleDeclaration|declaracion_asignacion) expresion_logica? ';' expresion_mat? ')' statement;
-
+function: ID '('(ID(','ID)*|)')';
 
 expresion_decimal:REAL;
 expresion_entera:INT;

@@ -1,4 +1,8 @@
+import javafx.scene.chart.XYChart;
+
 import javax.swing.*;
+import javax.xml.crypto.Data;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,6 +13,20 @@ public class Printer {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
+
+    private volatile boolean OK =false;
+    int cosa;
+    void Esperalo() {
+
+        while (!OK){
+
+        }
+
+        OK=false;
+
+    }
+
+
 
     JFrame windowVar = new JFrame("Variables");
     VarPanel PanelVariables = new VarPanel();
@@ -68,7 +86,7 @@ public class Printer {
                         .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jButton1.setText("NO SE");
+        jButton1.setText("SIGUIENTE PASO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -119,6 +137,7 @@ public class Printer {
                                 .addGap(91, 91, 91))
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+        Menu.setLocationRelativeTo(null);
         Menu.setResizable(false);
         Menu.pack();
     }
@@ -132,8 +151,7 @@ public class Printer {
     }
 
     private void jButton1ActionPerformed(ActionEvent evt) {
-
-
+        OK=true;
     }
 
 

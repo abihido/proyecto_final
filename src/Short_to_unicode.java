@@ -111,7 +111,7 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void exitFunction_declaration(lengBasicParser.Function_declarationContext ctx) {
+    @Override public void exitFunction_declaration(lengBasicParser.Function_declarationContext ctx)  {
         ArrayList typesAux=new ArrayList();
         ArrayList argNamesAux= new ArrayList();
         String text;
@@ -123,16 +123,13 @@ public class Short_to_unicode extends lengBasicBaseListener {
             typesAux.add("vacio");
             argNamesAux.add("vacio");
         }
-        System.out.println( "function "+ctx.getChild(0).getText());
-        System.out.println("function "+ ctx.getChild(1).getText());
-        System.out.println("function "+ ctx.getChild(2).getText());
-        System.out.println( "function "+ctx.getChild(3).getText());
-        System.out.println("function "+ ctx.getChild(4).getText());
-        System.out.println("function "+ ctx.getChild(5).getText());
+
 
         System.out.println(Arrays.toString(types.toArray()));
 
         dibujo.addFunction(ctx.getChild(1).getText(),ctx.getChild(0).getText(),typesAux,argNamesAux,ctx.getChild(5).getText());
+
+        dibujo.Esperalo();
 
     }
     /**
