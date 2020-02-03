@@ -6,7 +6,15 @@ import org.antlr.v4.runtime.RuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
+import java.io.IOException;
+
+
 public class Short_to_unicode extends lengBasicBaseListener {
+    Printer dibujo;
+    public Short_to_unicode() throws IOException {
+        System.out.println("hola");
+         dibujo=new Printer();
+    }
 
     /**
      * {@inheritDoc}
@@ -108,10 +116,13 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitDeclaracion_asignacion(lengBasicParser.Declaracion_asignacionContext ctx) {
+
         System.out.println( ctx.getChild(0).getText());
         System.out.println( ctx.getChild(1).getText());
         System.out.println( ctx.getChild(2).getText());
         System.out.println( ctx.getChild(3).getText());
+
+        dibujo.addVarGlobal(ctx.getChild(1).getText(),ctx.getChild(3).getText(),false);
     }
     /**
      * {@inheritDoc}
@@ -456,42 +467,7 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterTipos_fun(lengBasicParser.Tipos_funContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void exitTipos_fun(lengBasicParser.Tipos_funContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void enterTipos_sin_pre_fun(lengBasicParser.Tipos_sin_pre_funContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void exitTipos_sin_pre_fun(lengBasicParser.Tipos_sin_pre_funContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void enterTipos_con_pre_fun(lengBasicParser.Tipos_con_pre_funContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
-    @Override public void exitTipos_con_pre_fun(lengBasicParser.Tipos_con_pre_funContext ctx) { }
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation does nothing.</p>
-     */
+
     @Override public void enterVariables(lengBasicParser.VariablesContext ctx) { }
     /**
      * {@inheritDoc}

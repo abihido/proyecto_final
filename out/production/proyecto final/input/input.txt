@@ -1,3 +1,2 @@
 int puto = 1;
-void puto (int un_puto){
-}
+string sternocleidomastoideo = "pedro puso un clavito";

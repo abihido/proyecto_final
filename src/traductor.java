@@ -6,15 +6,9 @@ import javax.swing.*;
 import java.io.IOException;
 public class traductor {
 
-    Printer dibujo = new Printer();
-
-    public traductor() throws IOException {
-
-    }
-
 
     public static void main(String[] args) throws IOException{
-
+        //Printer dibujo=new Printer();
         lengBasicLexer lexer;
         if (args.length>0)
             lexer = new lengBasicLexer(CharStreams.fromFileName(args[0]));
@@ -27,7 +21,8 @@ public class traductor {
         // Create a generic parse tree walker that can trigger callbacks
         ParseTreeWalker walker = new ParseTreeWalker();
         // Walk the tree created during the parse, trigger callbacks
-        walker.walk(new Short_to_unicode(), tree);
+        Short_to_unicode Metodos = new Short_to_unicode();
+        walker.walk(Metodos, tree);
         System.out.println(); // print a \n after translation
     }
 }
