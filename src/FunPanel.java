@@ -32,10 +32,6 @@ ArrayList argNames= new ArrayList();
 
 
     }
-
-
-
-
     void drawFuncion(Graphics g, int x, int y, int r, String id, String type){
         g.setColor(Color.BLACK);
         g.fillOval(x,y,2*r,2*r);

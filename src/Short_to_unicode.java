@@ -128,7 +128,7 @@ public class Short_to_unicode extends lengBasicBaseListener {
         if(ctx.parent.getParent().toString().contains("[93]")){//es global
             dibujo.addVarGlobal(ctx.getChild(1).getText(), ctx.getChild(3).getText(), false);
         }else{
-            //no es global xd
+            dibujo.addVarLocal(ctx.getChild(1).getText(), ctx.getChild(3).getText(), false);
         }
     }
     /**

@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e6f2a94-0cbe-4df5-a570-0a5702e527b6" name="Default Changelist" comment="algo" />
+    <list default="true" id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/FunPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/FunPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/Funcion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/Funcion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/VarPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/Variable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/Variable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FunPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FunPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Listeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Short_to_unicode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Short_to_unicode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VarPanel.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +28,37 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="juan" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="ProjectId" id="1X5W2zSbmXTKydOKdDERzYcLfmI" />
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\juanda\IdeaProjects\proyecto final\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VJliekKrlsn20i1aEybXOwx03k" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Desktop/trabajos/lenguajes/ANTLR/antlr-4.7.2-complete.jar!/" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -47,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="traductor" type="Application" factoryName="Application">
+    <configuration name="traductor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="traductor" />
       <module name="proyecto final" />
       <option name="PROGRAM_PARAMETERS" value="input/input.txt" />
@@ -56,11 +90,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.traductor" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.traductor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.traductor" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -70,41 +108,76 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2e6f2a94-0cbe-4df5-a570-0a5702e527b6" name="Default Changelist" comment="" />
-      <created>1580336233126</created>
+      <changelist id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="" />
+      <created>1576979207247</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580336233126</updated>
+      <updated>1576979207247</updated>
     </task>
-    <task id="LOCAL-00001" summary="algo">
-      <created>1580675077845</created>
+    <task id="LOCAL-00001" summary="add imports">
+      <created>1580490633031</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1580675077845</updated>
+      <updated>1580490633031</updated>
     </task>
-    <task id="LOCAL-00002" summary="algo">
-      <created>1580675743503</created>
+    <task id="LOCAL-00002" summary="add imports">
+      <created>1580535149308</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1580675743503</updated>
+      <updated>1580535149308</updated>
     </task>
-    <task id="LOCAL-00003" summary="algo">
-      <created>1580680075213</created>
+    <task id="LOCAL-00003" summary="add Function description Panel">
+      <created>1580618255577</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1580680075213</updated>
+      <updated>1580618255577</updated>
     </task>
-    <task id="LOCAL-00004" summary="algo">
-      <created>1580689229855</created>
+    <task id="LOCAL-00004" summary="add listeners">
+      <created>1580618952951</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1580689229855</updated>
+      <updated>1580618952951</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add Menu and var listeners">
+      <created>1580669967365</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580669967365</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit hasta llamada">
+      <created>1580672677288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580672677288</updated>
+    </task>
+    <task id="LOCAL-00007" summary="abri metodos de comunicacion entre las variables y el traductor , corregi la gramatica respecto a las expresiones de return">
+      <created>1580679787247</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580679787247</updated>
+    </task>
+    <task id="LOCAL-00008" summary="arregle la gramatica">
+      <created>1580681938878</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1580681938878</updated>
+    </task>
+    <task id="LOCAL-00009" summary="se agregan variables globales ala GUI">
+      <created>1580689186969</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580689186970</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -121,7 +194,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="algo" />
-    <option name="LAST_COMMIT_MESSAGE" value="algo" />
+    <MESSAGE value="add imports" />
+    <MESSAGE value="add Function description Panel" />
+    <MESSAGE value="add listeners" />
+    <MESSAGE value="add Menu and var listeners" />
+    <MESSAGE value="commit hasta llamada" />
+    <MESSAGE value="abri metodos de comunicacion entre las variables y el traductor , corregi la gramatica respecto a las expresiones de return" />
+    <MESSAGE value="arregle la gramatica" />
+    <MESSAGE value="se agregan variables globales" />
+    <MESSAGE value="se agregan variables globales ala GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="se agregan variables globales ala GUI" />
   </component>
 </project>

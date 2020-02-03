@@ -7,14 +7,15 @@ public class Formas {
 }
 
 class Variable{
-    int x,y,x_final;
+    int x,y,x_final,index;
     String name,value;
     boolean vector;
 
-    public Variable(int x_pos,int y_pos,String nombre,Object valor,boolean vector){
+    public Variable(int x_pos,int y_pos,String nombre,Object valor,boolean Vector){
         x=x_pos;
         y=y_pos;
         name=nombre;
+        vector=Vector;
         value=valor.toString();
         if(name.length()>value.length()){
             x_final=5*name.length()+50;

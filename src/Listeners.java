@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Listeners {
 }
@@ -71,13 +73,67 @@ class FunListener  implements MouseListener {
 }
 
 class VarListener implements MouseListener{
+    Variable Global[] = new Variable[20];
+    Variable Local[] = new Variable[20];
+    Variable Extra[][] = new Variable[20][20];
 
+    public void setGlobal(Variable[] global) {
+        Global = global;
+    }
 
+    public void setLocal(Variable[] local) {
+        Local = local;
+    }
+
+    public void setExtra(Variable[][] extra) {
+        Extra = extra;
+    }
+
+    void CheckArrays(int x, int y){
+        for(int i=0; i<Global.length;i++){
+            try{
+                if(x>Global[i].x&&x<Global[i].x+Global[i].x_final&&Global[i].vector){
+                    if(y>Global[i].y&&y<Global[i].y+150){
+                        JFrame windowFun = new JFrame(Global[i].name);
+                        windowFun.setSize(600+Global[i].index*100, 400);
+                        windowFun.add(new showArreglo(Extra[Global[i].index],Global[i].name));
+                        System.out.println(Global[i].index);
+                        System.out.println(Arrays.toString(Extra[Global[i].index]));
+                        windowFun.setLocationRelativeTo(null);
+                        windowFun.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                        windowFun.setVisible(true);
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex){
+                break;
+            }
+        }
+        for(int i=0; i<Local.length;i++){
+            try{
+                if(x>Local[i].x&&x<Local[i].x+Local[i].x_final&&Local[i].vector){
+                    if(y>Local[i].y&&y<Local[i].y+150){
+                        JFrame windowFun = new JFrame(Local[i].name);
+                        windowFun.add(new showArreglo(Extra[Global[i].index],Global[i].name));
+                        windowFun.setSize(Extra[Global[i].index].length*100, 600);
+                        windowFun.setLocationRelativeTo(null);
+                        windowFun.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                        windowFun.setVisible(true);
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex){
+                break;
+            }
+        }
+    }
 
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        CheckArrays(e.getX(),e.getY());
     }
 
     @Override
