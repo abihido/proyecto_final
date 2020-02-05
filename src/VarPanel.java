@@ -32,7 +32,7 @@ public class VarPanel extends JPanel {
         }
     }
 
-    void addExtra(int index,String value){
+    void addExtra(int index,String value,String t){
         int a;
         for(int i =0; i<Extra[index].length;i++){
             try {
@@ -40,10 +40,10 @@ public class VarPanel extends JPanel {
             }
             catch (Exception ex){
                 if(i==0){
-                    Extra[index][i] = new Variable(200, 170, Integer.toString(i), value, false);
+                    Extra[index][i] = new Variable(200, 170, Integer.toString(i), value, false,t);
                 }
                 else {
-                    Extra[index][i] = new Variable(Extra[index][i - 1].x + Extra[index][i - 1].x_final + 30, 70, Integer.toString(i), value, false);
+                    Extra[index][i] = new Variable(Extra[index][i - 1].x + Extra[index][i - 1].x_final + 30, 70, Integer.toString(i), value, false,t);
                 }
                 break;
             }
@@ -53,13 +53,13 @@ public class VarPanel extends JPanel {
     }
 
 
-    void addVarG(String iden,String val,boolean vector){
+    void addVarG(String iden,String val,boolean vector,String t){
             if(GActualIndex==0){
                 if(!vector) {
-                    Global[GActualIndex] = new Variable(200, 70, iden, val, vector);
+                    Global[GActualIndex] = new Variable(200, 70, iden, val, vector,t);
                 }
                 else {
-                    Global[GActualIndex] = new Variable(200, 70, iden,"", vector);
+                    Global[GActualIndex] = new Variable(200, 70, iden,"", vector,t);
                     Global[GActualIndex].index=ExtraIndex;
                     Extra[ExtraIndex]= new Variable[20];
                     ExtraIndex++;
@@ -67,13 +67,13 @@ public class VarPanel extends JPanel {
             }
             else {
                 if(vector){
-                    Global[GActualIndex] = new Variable(Global[GActualIndex - 1].x + Global[GActualIndex - 1].x_final + 30, 70, iden, "", vector);
+                    Global[GActualIndex] = new Variable(Global[GActualIndex - 1].x + Global[GActualIndex - 1].x_final + 30, 70, iden, "", vector,t);
                     Global[GActualIndex].index=ExtraIndex;
                     Extra[ExtraIndex]= new Variable[20];
                     ExtraIndex++;
                 }
                 else {
-                    Global[GActualIndex] = new Variable(Global[GActualIndex - 1].x + Global[GActualIndex - 1].x_final + 30, 70, iden, val, vector);
+                    Global[GActualIndex] = new Variable(Global[GActualIndex - 1].x + Global[GActualIndex - 1].x_final + 30, 70, iden, val, vector,t);
                 }
             }
             GActualIndex++;
@@ -81,14 +81,14 @@ public class VarPanel extends JPanel {
             mouse.setExtra(Extra);
        //     System.out.println("inicia"+Global[i].x+"   termina"+Global[i].x_final);
     }
-    void addVarL(String iden,String val,boolean vector){
+    void addVarL(String iden,String val,boolean vector,String t){
         if(LActualIndex==0){
             if(!vector){
-                Local[LActualIndex]= new Variable(200,350,iden,val,vector);
+                Local[LActualIndex]= new Variable(200,350,iden,val,vector,t);
 
             }
             else{
-                Local[LActualIndex]= new Variable(200,350,iden,"",vector);
+                Local[LActualIndex]= new Variable(200,350,iden,"",vector,t);
                 Local[LActualIndex].index=ExtraIndex;
                 Extra[ExtraIndex]= new Variable[20];
                 ExtraIndex++;
@@ -97,10 +97,10 @@ public class VarPanel extends JPanel {
         }
         else {
             if(!vector) {
-                Local[LActualIndex] = new Variable(Local[LActualIndex - 1].x + Local[LActualIndex - 1].x_final + 30, 350, iden, val, vector);
+                Local[LActualIndex] = new Variable(Local[LActualIndex - 1].x + Local[LActualIndex - 1].x_final + 30, 350, iden, val, vector,t);
             }
             else {
-                Local[LActualIndex] = new Variable(Local[LActualIndex - 1].x + Local[LActualIndex - 1].x_final + 30, 350, iden, "", vector);
+                Local[LActualIndex] = new Variable(Local[LActualIndex - 1].x + Local[LActualIndex - 1].x_final + 30, 350, iden, "", vector,t);
                 Local[LActualIndex].index=ExtraIndex;
                 Extra[ExtraIndex]= new Variable[20];
                 ExtraIndex++;
@@ -111,14 +111,32 @@ public class VarPanel extends JPanel {
         mouse.setExtra(Extra);
         //     System.out.println("inicia"+Global[i].x+"   termina"+Global[i].x_final);
     }
+    String analizador(String actual,String llega,String t){
 
+    if((!actual.matches("\\d+"))&& t.compareTo("int")==0){
+        System.err.println("TIPOS INCOMPATIBLES");
+
+    }
+    else if (t.compareTo("String")==0||t.compareTo("char")==0){
+        return actual+llega;
+    } else if (actual.matches("(\\d+)('.'\\d+)")&& t.compareTo("double")==0) {
+        return String.valueOf(Double.valueOf(actual)+Double.valueOf(llega));
+    }
+    else if(actual.matches("\\d+")&& t.compareTo("int")==0){
+        return String.valueOf(Integer.valueOf(actual)+Integer.valueOf(llega));
+    }
+    else{
+        return actual+llega;
+    }
+        return "lmm";
+    }
     void  modVariable(String id, String valor){
 
         for(int i=0;i<20;i++){
             try {
 
                 if (Local[i].name.compareTo(id) == 0) {
-                    Local[i].value = valor;
+                    Local[i].value = analizador(Local[i].value,valor,Local[i].tipo);
                     break;
                 }
             }catch (Exception er){
@@ -126,7 +144,7 @@ public class VarPanel extends JPanel {
             }
             try{
             if(Global[i].name.compareTo(id)==0){
-                Global[i].value=valor;
+                Global[i].value=analizador(Global[i].value,valor,Global[i].tipo);
             }else if(i==20){
                 System.err.println("no existe esa variable");
             }}

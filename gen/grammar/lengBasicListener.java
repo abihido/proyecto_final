@@ -168,6 +168,16 @@ public interface lengBasicListener extends ParseTreeListener {
 	 */
 	void exitDesicion(lengBasicParser.DesicionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link lengBasicParser#elso}.
+	 * @param ctx the parse tree
+	 */
+	void enterElso(lengBasicParser.ElsoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link lengBasicParser#elso}.
+	 * @param ctx the parse tree
+	 */
+	void exitElso(lengBasicParser.ElsoContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link lengBasicParser#wHILe}.
 	 * @param ctx the parse tree
 	 */

@@ -129,6 +129,13 @@ public class lengBasicBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitElso(lengBasicParser.ElsoContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitWHILe(lengBasicParser.WHILeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}

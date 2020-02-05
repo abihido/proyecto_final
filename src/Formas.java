@@ -8,12 +8,13 @@ public class Formas {
 
 class Variable{
     int x,y,x_final,index;
-    String name,value;
+    String name,value,tipo;
     boolean vector;
 
-    public Variable(int x_pos,int y_pos,String nombre,Object valor,boolean Vector){
+    public Variable(int x_pos,int y_pos,String nombre,Object valor,boolean Vector,String tip){
         x=x_pos;
         y=y_pos;
+        tipo=tip;
         name=nombre;
         vector=Vector;
         value=valor.toString();
