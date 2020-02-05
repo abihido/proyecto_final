@@ -138,6 +138,16 @@ public interface lengBasicListener extends ParseTreeListener {
 	 */
 	void exitExpresion(lengBasicParser.ExpresionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link lengBasicParser#salida}.
+	 * @param ctx the parse tree
+	 */
+	void enterSalida(lengBasicParser.SalidaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link lengBasicParser#salida}.
+	 * @param ctx the parse tree
+	 */
+	void exitSalida(lengBasicParser.SalidaContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link lengBasicParser#ciclo}.
 	 * @param ctx the parse tree
 	 */
@@ -187,6 +197,16 @@ public interface lengBasicListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFOR(lengBasicParser.FORContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link lengBasicParser#function}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunction(lengBasicParser.FunctionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link lengBasicParser#function}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunction(lengBasicParser.FunctionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link lengBasicParser#expresion_decimal}.
 	 * @param ctx the parse tree
@@ -258,72 +278,72 @@ public interface lengBasicListener extends ParseTreeListener {
 	 */
 	void exitExpresion_mat(lengBasicParser.Expresion_matContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#logicalandexpression}.
 	 * @param ctx the parse tree
 	 */
 	void enterLogicalandexpression(lengBasicParser.LogicalandexpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#logicalandexpression}.
 	 * @param ctx the parse tree
 	 */
 	void exitLogicalandexpression(lengBasicParser.LogicalandexpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#logicalorexpression}.
 	 * @param ctx the parse tree
 	 */
 	void enterLogicalorexpression(lengBasicParser.LogicalorexpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#logicalorexpression}.
 	 * @param ctx the parse tree
 	 */
 	void exitLogicalorexpression(lengBasicParser.LogicalorexpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#equalityexpression}.
 	 * @param ctx the parse tree
 	 */
 	void enterEqualityexpression(lengBasicParser.EqualityexpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#equalityexpression}.
 	 * @param ctx the parse tree
 	 */
 	void exitEqualityexpression(lengBasicParser.EqualityexpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#andexpression}.
 	 * @param ctx the parse tree
 	 */
 	void enterAndexpression(lengBasicParser.AndexpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#andexpression}.
 	 * @param ctx the parse tree
 	 */
 	void exitAndexpression(lengBasicParser.AndexpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#exclusiveorexpression}.
 	 * @param ctx the parse tree
 	 */
 	void enterExclusiveorexpression(lengBasicParser.ExclusiveorexpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#exclusiveorexpression}.
 	 * @param ctx the parse tree
 	 */
 	void exitExclusiveorexpression(lengBasicParser.ExclusiveorexpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#inclusiveorexpression}.
 	 * @param ctx the parse tree
 	 */
 	void enterInclusiveorexpression(lengBasicParser.InclusiveorexpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#inclusiveorexpression}.
 	 * @param ctx the parse tree
 	 */
 	void exitInclusiveorexpression(lengBasicParser.InclusiveorexpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#relationalexpression}.
 	 * @param ctx the parse tree
 	 */
 	void enterRelationalexpression(lengBasicParser.RelationalexpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#relationalexpression}.
 	 * @param ctx the parse tree
 	 */
 	void exitRelationalexpression(lengBasicParser.RelationalexpressionContext ctx);
@@ -338,22 +358,22 @@ public interface lengBasicListener extends ParseTreeListener {
 	 */
 	void exitShiftoperator(lengBasicParser.ShiftoperatorContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#mulriplicacion}.
 	 * @param ctx the parse tree
 	 */
 	void enterMulriplicacion(lengBasicParser.MulriplicacionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#mulriplicacion}.
 	 * @param ctx the parse tree
 	 */
 	void exitMulriplicacion(lengBasicParser.MulriplicacionContext ctx);
 	/**
-	 * Enter a parse tree produced by .
+	 * Enter a parse tree produced by {@link lengBasicParser#adicion}.
 	 * @param ctx the parse tree
 	 */
 	void enterAdicion(lengBasicParser.AdicionContext ctx);
 	/**
-	 * Exit a parse tree produced by .
+	 * Exit a parse tree produced by {@link lengBasicParser#adicion}.
 	 * @param ctx the parse tree
 	 */
 	void exitAdicion(lengBasicParser.AdicionContext ctx);

@@ -112,6 +112,31 @@ public class VarPanel extends JPanel {
         //     System.out.println("inicia"+Global[i].x+"   termina"+Global[i].x_final);
     }
 
+    void  modVariable(String id, String valor){
+
+        for(int i=0;i<20;i++){
+            try {
+
+                if (Local[i].name.compareTo(id) == 0) {
+                    Local[i].value = valor;
+                    break;
+                }
+            }catch (Exception er){
+
+            }
+            try{
+            if(Global[i].name.compareTo(id)==0){
+                Global[i].value=valor;
+            }else if(i==20){
+                System.err.println("no existe esa variable");
+            }}
+            catch (Exception ex){
+            }
+        }
+        mouse.setLocal(Local);
+        mouse.setGlobal(Global);
+    }
+
     void crearVariable(Graphics g, int x, int y, int xfinal, String id, String Val){
         g.setColor(Color.decode("#0D36F5"));
         g.fillRect(x,y,xfinal,150);

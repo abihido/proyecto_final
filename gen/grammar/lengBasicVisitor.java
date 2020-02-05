@@ -89,6 +89,12 @@ public interface lengBasicVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpresion(lengBasicParser.ExpresionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link lengBasicParser#salida}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSalida(lengBasicParser.SalidaContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link lengBasicParser#ciclo}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -118,6 +124,12 @@ public interface lengBasicVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitFOR(lengBasicParser.FORContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link lengBasicParser#function}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunction(lengBasicParser.FunctionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link lengBasicParser#expresion_decimal}.
 	 * @param ctx the parse tree

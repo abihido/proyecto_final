@@ -4,11 +4,11 @@ grammar lengBasic;
 ///REGLAS
 
 begin:imports globalThings* main? EOF;
-imports:('import' BIBLIOTECA)* ('using''namespace''std'COT|) ;
+imports:('#''import' BIBLIOTECA)* ('using''namespace''std'COT|) ;
 statement:'{' localThings*'}'  ;
 fun_statement: '{' localThings* 'return' expresion COT'}'  ;
 globalThings:declaracion| assignmentexpression|function_declaration|void_declaration;
-localThings:declaracion |ciclo|assignmentexpression|desicion;
+localThings:declaracion |ciclo|assignmentexpression|desicion|salida;
 main: 'int main' '(' ')'fun_statement;
 declaracion : simpleDeclaration|declaracion_asignacion;
 void_declaration:'void' ID '(' arguments')' statement;
@@ -16,6 +16,8 @@ function_declaration: tipos ID '('arguments')' fun_statement COT;
 declaracion_asignacion:tipos ID assignmentoperator expresion COT;
 simpleDeclaration : tipos variables COT;
 expresion:expresion_entera | expresion_decimal|expresion_logica|expresion_mat|expresion_palabra|function;
+
+salida:'cout' LeftShift expresion;
 
 ciclo:fOR |wHILe |do_while;
 desicion:  IF '(' expresion_logica')' statement (ELSE statement|ELSE desicion |);
@@ -94,7 +96,7 @@ Do:'do';
 LeftShift: '<<';
 RightShift:'>>';
 ID : [a-zA-Z_]+[0-9]* ;
-BIBLIOTECA: '"'ID'.h''"'|'<'ID'.h''>';
+BIBLIOTECA: '"'ID'.h''"'|'<'ID'.h''>'|'<'ID'>';
 WORD: '"'(ID|INT|REAL|' ')*'"';
 ///TIPOS
 

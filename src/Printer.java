@@ -12,10 +12,9 @@ public class Printer {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JPanel jPanel1;
+    public Descritor jPanel1 = new Descritor();
 
     private volatile boolean OK =false;
-    int cosa;
     void Esperalo() {
 
         while (!OK){
@@ -59,6 +58,10 @@ public class Printer {
         PanelFunciones.addFuncion(name,tipo,types,argNames,s);
     }
 
+    public void modifyVar(String name, String valor){
+        PanelVariables.modVariable(name,valor);
+    }
+
     public Printer() throws IOException {
         MenuPrincipal();
         Menu.setVisible(true);
@@ -67,7 +70,6 @@ public class Printer {
     }
 
     public void MenuPrincipal() throws IOException{
-        jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -169,5 +171,72 @@ public class Printer {
         windowFun.setLocationRelativeTo(null);
         windowFun.setResizable(false);
         windowFun.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+    }
+
+}
+
+class Descritor extends JPanel {
+
+    String Instruccion,Nombre1;
+    int option;
+    public Descritor(){
+
+    }
+    void setOption(int i ,String nombre1){
+        option=i;
+        Nombre1=nombre1;
+        updateUI();
+    }
+    void CreateFunction(Graphics g){
+        Instruccion="SE CREA LA FUNCION";
+    }
+    void CreateVariable(Graphics g){
+        Instruccion="SE CREA LA VARIABLE";
+    }
+    void CreateVariables(Graphics g){
+        Instruccion="SE CREAN LAS VARIABLES";
+    }
+    void CreateAndAssing(Graphics g){
+        Instruccion="SE CREA LA VARIABLE";
+    }
+    void Assing(Graphics g){
+        Instruccion="SE LE ASIGNA A LA VARIABLE";
+    }
+    void EnterToMain(Graphics g){
+        Instruccion="ENTRAMOS AL MAIN";
+    }
+    void Bienvenidos(Graphics g){
+        Instruccion="";
+        int x= (getWidth()-"BIENVENIDOS".length()*20)/2 ;
+
+        g.setFont(new Font("Times New Roman",Font.BOLD,60));
+        g.drawString("BIENVENIDOS",x,200);
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        switch (option){
+            case 0: Bienvenidos(g); break;
+            case 1: CreateFunction(g); break;
+            case 2: CreateVariable(g); break;
+            case 3: CreateVariables(g); break;
+            case 4: CreateAndAssing(g); break;
+            case 5: Assing(g);break;
+            case 6: EnterToMain(g);break;
+        }
+        g.setFont(new Font("Arial",Font.BOLD,35));
+        g.setColor(Color.black);
+        int x= (getWidth()-Instruccion.length()*20)/2 ;
+        g.drawString(Instruccion,x,200);
+        g.setFont(new Font("Arial",Font.BOLD,20));
+        try {
+            x = (getWidth() - Nombre1.length() * 15) / 2;
+            g.drawString(Nombre1, x, 300);
+        }
+        catch (Exception ex){
+
+        }
     }
 }

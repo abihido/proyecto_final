@@ -172,6 +172,18 @@ public class lengBasicBaseListener implements lengBasicListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterSalida(lengBasicParser.SalidaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSalida(lengBasicParser.SalidaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterCiclo(lengBasicParser.CicloContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -227,6 +239,18 @@ public class lengBasicBaseListener implements lengBasicListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFOR(lengBasicParser.FORContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunction(lengBasicParser.FunctionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunction(lengBasicParser.FunctionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

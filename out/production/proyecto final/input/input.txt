@@ -1,14 +1,12 @@
-int f(int h, char cosa){
+#include <cstdio.h>
 
-return 3;
-};
+using namespace std;
 
-int cose(int g, char cosass){
-
-return 3;
-};
-
-char Nombre_super_largo_de_verdad(){
-
-return "ccc";
-};
+int main(){
+    auto asd = 5;
+    int i = 0;
+    for (;i<5;i++){
+        cout <<  i;
+    }
+    return 0;
+}
