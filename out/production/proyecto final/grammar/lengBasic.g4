@@ -4,7 +4,7 @@ grammar lengBasic;
 ///REGLAS
 
 begin:imports globalThings* main? EOF;
-imports:('#''import' BIBLIOTECA)* ('using''namespace''std'COT|) ;
+imports:('#''include' BIBLIOTECA)* ('using''namespace''std'COT|) ;
 statement:'{' localThings*'}'  ;
 fun_statement: '{' localThings* 'return' expresion COT'}'  ;
 globalThings:declaracion| assignmentexpression|function_declaration|void_declaration;
@@ -20,12 +20,12 @@ expresion:expresion_entera | expresion_decimal|expresion_logica|expresion_mat|ex
 salida:'cout' LeftShift expresion;
 
 ciclo:fOR |wHILe |do_while;
-desicion:  IF '(' expresion_logica')' statement (ELSE statement|ELSE desicion |);
-
+desicion:  IF '(' expresion_logica')' statement elso;
+elso:(ELSE statement|ELSE desicion |);
 wHILe: WHile '(' expresion_logica ')' statement;
 do_while: Do statement WHile '(' expresion_logica ')' COT;
 fOR: FOR'(' (simpleDeclaration|declaracion_asignacion) expresion_logica? ';' expresion_mat? ')' statement;
-function: ID '('(expresion(','expresion)*|)')';
+function: ID '('(ID(','ID)*|)')';
 
 expresion_decimal:REAL;
 expresion_entera:INT;
@@ -105,8 +105,8 @@ WORD: '"'(ID|INT|REAL|' ')*'"';
 ///COMENTARIOS
 
 Whitespace
-   : [ \t]+ -> skip
-   ;
+   : [ \t]+ -> skip;
+
 Newline
    : ('\r' '\n'? | '\n') -> skip
    ;

@@ -1,10 +1,18 @@
-int c;
- c=1;
- int pos (int a, int b, int c){
- int plos=2;
- return 1;
- };
- int main (){
- int x =0;
- return 0;
- }
+#include <cstdio.h>
+
+using namespace std;
+
+
+int pedro(int y){
+auto juanito ="el crack";
+return juanito;
+};
+
+int i=6;
+
+
+int main(){
+
+i=8;
+return 0;
+}

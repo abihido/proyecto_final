@@ -49,12 +49,12 @@ public class Printer {
         return PanelVariables.Global;
     }
 
-    public void addVarGlobal(String identifier,String variable,boolean vector){
-        PanelVariables.addVarG(identifier,variable,vector);
+    public void addVarGlobal(String identifier,String variable,boolean vector,String t){
+        PanelVariables.addVarG(identifier,variable,vector,t);
     }
 
-    public void addVarLocal(String identifier,String variable,boolean vector){
-        PanelVariables.addVarL(identifier,variable,vector);
+    public void addVarLocal(String identifier,String variable,boolean vector,String t){
+        PanelVariables.addVarL(identifier,variable,vector,t);
     }
 
     public void addFunction(String name, String tipo, ArrayList types, ArrayList argNames, String s){
@@ -222,6 +222,8 @@ class Descritor extends JPanel {
     void EnterToMain(Graphics g){
         Instruccion="ENTRAMOS AL MAIN";
     }
+    void Conditional(Graphics g){Instruccion="REALIZAMOS UNA COMPARACION";}
+    void Final(Graphics g){Instruccion="Y ACABAMOS...";}
     void Bienvenidos(Graphics g){
         Instruccion="";
         int x= (getWidth()-"BIENVENIDOS".length()*20)/2 ;
@@ -243,6 +245,8 @@ class Descritor extends JPanel {
             case 4: CreateAndAssing(g); break;
             case 5: Assing(g);break;
             case 6: EnterToMain(g);break;
+            case 7:Conditional(g);break;
+            case 8:Final(g);break;
         }
         g.setFont(new Font("Arial",Font.BOLD,35));
         g.setColor(Color.black);

@@ -208,6 +208,18 @@ public class lengBasicBaseListener implements lengBasicListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterElso(lengBasicParser.ElsoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitElso(lengBasicParser.ElsoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterWHILe(lengBasicParser.WHILeContext ctx) { }
 	/**
 	 * {@inheritDoc}

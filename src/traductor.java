@@ -17,14 +17,18 @@ public class traductor {
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         lengBasicParser parser = new lengBasicParser( tokens);
         ParseTree tree = parser.begin();
-
         // Create a generic parse tree walker that can trigger callbacks
         ParseTreeWalker walker = new ParseTreeWalker();
         // Walk the tree created during the parse, trigger callbacks
-        Short_to_unicode Metodos = new Short_to_unicode();
-        walker.walk(Metodos, tree);
+        //Short_to_unicode Metodos = new Short_to_unicode();
+         //walker.walk(Metodos, tree);
 
-        System.out.println(); // print a \n after translation
-        System.out.println(tree.toStringTree(parser));
+
+        visitantes h = new visitantes();
+        h.visit(tree);
+
+
+        //System.out.println(); // print a \n after translation
+        //System.out.println(tree.toStringTree(parser));
     }
 }
