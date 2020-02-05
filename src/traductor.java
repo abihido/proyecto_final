@@ -23,6 +23,7 @@ public class traductor {
         // Walk the tree created during the parse, trigger callbacks
         Short_to_unicode Metodos = new Short_to_unicode();
         walker.walk(Metodos, tree);
+
         System.out.println(); // print a \n after translation
         System.out.println(tree.toStringTree(parser));
     }

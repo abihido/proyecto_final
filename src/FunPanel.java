@@ -1,16 +1,30 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FunPanel extends JPanel{
 
-Funcion FunDeclaradas[]=new Funcion[20];
-FunListener mouse = new FunListener();
+    Funcion FunDeclaradas[]=new Funcion[20];
+    FunListener mouse = new FunListener();
+    BufferedImage bg_fun;
 
-int actualIndex;
+    {
+        try {
+            bg_fun = ImageIO.read(new File("input/bg_fun.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    int actualIndex;
 
 
 
@@ -43,6 +57,7 @@ int actualIndex;
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.drawImage(bg_fun,0,0,getWidth(),getHeight(),this);
         for(int y=0;y<5;y++) {
             try{
                 drawFuncion(g, FunDeclaradas[y].x, FunDeclaradas[y].y, FunDeclaradas[y].r, FunDeclaradas[y].name,FunDeclaradas[y].tipo);
@@ -58,7 +73,15 @@ class FunDesPanel extends JPanel{
     String name,tipo,texto;
     ArrayList types= new ArrayList();
     ArrayList argNames= new ArrayList();
+    BufferedImage bg_fun;
 
+    {
+        try {
+            bg_fun = ImageIO.read(new File("input/bg_fun.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public FunDesPanel(Funcion objective) {
         name=objective.name;
         tipo=objective.tipo;
@@ -99,6 +122,7 @@ class FunDesPanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.drawImage(bg_fun,0,0,getWidth(),getHeight(),this);
         fillArguments(g);
     }
 }

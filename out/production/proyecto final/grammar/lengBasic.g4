@@ -4,7 +4,7 @@ grammar lengBasic;
 ///REGLAS
 
 begin:imports globalThings* main? EOF;
-imports:('import' BIBLIOTECA)* ('using''namespace''std'COT|) ;
+imports:('#''import' BIBLIOTECA)* ('using''namespace''std'COT|) ;
 statement:'{' localThings*'}'  ;
 fun_statement: '{' localThings* 'return' expresion COT'}'  ;
 globalThings:declaracion| assignmentexpression|function_declaration|void_declaration;
@@ -25,7 +25,7 @@ desicion:  IF '(' expresion_logica')' statement (ELSE statement|ELSE desicion |)
 wHILe: WHile '(' expresion_logica ')' statement;
 do_while: Do statement WHile '(' expresion_logica ')' COT;
 fOR: FOR'(' (simpleDeclaration|declaracion_asignacion) expresion_logica? ';' expresion_mat? ')' statement;
-function: ID '('(ID(','ID)*|)')';
+function: ID '('(expresion(','expresion)*|)')';
 
 expresion_decimal:REAL;
 expresion_entera:INT;
@@ -96,7 +96,7 @@ Do:'do';
 LeftShift: '<<';
 RightShift:'>>';
 ID : [a-zA-Z_]+[0-9]* ;
-BIBLIOTECA: '"'ID'.h''"'|'<'ID'.h''>';
+BIBLIOTECA: '"'ID'.h''"'|'<'ID'.h''>'|'<'ID'>';
 WORD: '"'(ID|INT|REAL|' ')*'"';
 ///TIPOS
 

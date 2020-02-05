@@ -1,9 +1,12 @@
 import javafx.scene.chart.XYChart;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -89,6 +92,7 @@ public class Printer {
         );
 
         jButton1.setText("SIGUIENTE PASO");
+        jButton1.setFont(new Font("Arial",Font.BOLD,20));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -96,6 +100,7 @@ public class Printer {
         });
 
         jButton2.setText("Funciones");
+        jButton2.setFont(new Font("Arial",Font.BOLD,20));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -103,6 +108,7 @@ public class Printer {
         });
 
         jButton3.setText("Variables");
+        jButton3.setFont(new Font("Arial",Font.BOLD,20));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -139,9 +145,11 @@ public class Printer {
                                 .addGap(91, 91, 91))
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
         Menu.setLocationRelativeTo(null);
         Menu.setResizable(false);
         Menu.pack();
+        jPanel1.setBackground(Color.WHITE);
     }
 
     private void jButton3ActionPerformed(ActionEvent evt) {
@@ -176,6 +184,15 @@ public class Printer {
 }
 
 class Descritor extends JPanel {
+    BufferedImage bg_menu;
+
+    {
+        try {
+            bg_menu = ImageIO.read(new File("input/bg_menu.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     String Instruccion,Nombre1;
     int option;
@@ -216,6 +233,7 @@ class Descritor extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        g.drawImage(bg_menu,0,0,getWidth(),getHeight(),this);
 
         switch (option){
             case 0: Bienvenidos(g); break;

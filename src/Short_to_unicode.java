@@ -23,6 +23,7 @@ public class Short_to_unicode extends lengBasicBaseListener {
     public Short_to_unicode() throws IOException {
          dibujo=new Printer();
     }
+    int Linea = 0;
 
     /**
      * {@inheritDoc}
@@ -85,7 +86,6 @@ public class Short_to_unicode extends lengBasicBaseListener {
      */
     @Override public void enterMain(lengBasicParser.MainContext ctx) {
 
-
         dibujo.jPanel1.setOption(6,"");
         dibujo.Esperalo();
     }
@@ -112,7 +112,10 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterFunction_declaration(lengBasicParser.Function_declarationContext ctx) { }
+    @Override public void enterFunction_declaration(lengBasicParser.Function_declarationContext ctx) {
+        /*System.out.println("esta en la linea: "+Linea);
+        Linea++;*/
+    }
     /**
      * {@inheritDoc}
      *
@@ -146,7 +149,10 @@ public class Short_to_unicode extends lengBasicBaseListener {
 
 
 
-    @Override public void enterDeclaracion_asignacion(lengBasicParser.Declaracion_asignacionContext ctx) { }
+    @Override public void enterDeclaracion_asignacion(lengBasicParser.Declaracion_asignacionContext ctx) {
+      /*  System.out.println("esta en la linea: "+Linea);
+        Linea++;*/
+    }
     /**
      * {@inheritDoc}
      *
@@ -171,7 +177,10 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterSimpleDeclaration(lengBasicParser.SimpleDeclarationContext ctx) { }
+    @Override public void enterSimpleDeclaration(lengBasicParser.SimpleDeclarationContext ctx) {
+       /* System.out.println("esta en la linea: "+Linea);
+        Linea++;*/
+    }
     /**
      * {@inheritDoc}
      *
@@ -353,7 +362,10 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterAssignmentexpression(lengBasicParser.AssignmentexpressionContext ctx) { }
+    @Override public void enterAssignmentexpression(lengBasicParser.AssignmentexpressionContext ctx) {
+        System.out.println("esta en la linea: "+Linea);
+        Linea++;
+    }
     /**
      * {@inheritDoc}
      *
@@ -688,7 +700,10 @@ public class Short_to_unicode extends lengBasicBaseListener {
      *
      * <p>The default implementation does nothing.</p>
      */
-    @Override public void enterArguments(lengBasicParser.ArgumentsContext ctx) { }
+    @Override public void enterArguments(lengBasicParser.ArgumentsContext ctx) {
+        System.out.println("esta en la linea: "+Linea);
+        Linea++;
+    }
     /**
      * {@inheritDoc}
      *

@@ -1,11 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8a301a7c-2210-4fd6-b00e-d722ef200672" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/gen/grammar/lengBasicBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/grammar/lengBasicBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/grammar/lengBasicBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/grammar/lengBasicBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/grammar/lengBasicListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/grammar/lengBasicListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/grammar/lengBasicVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/grammar/lengBasicVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammar/lengBasic.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/lengBasic.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proyecto final/Printer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/Printer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/gen/grammar/lengBasic.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/gen/grammar/lengBasic.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/gen/grammar/lengBasic.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/gen/grammar/lengBasic.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/gen/grammar/lengBasicLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/gen/grammar/lengBasicLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/gen/grammar/lengBasicLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/gen/grammar/lengBasicLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasic.g4" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasic.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasic.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasic.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasic.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasic.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicBaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicBaseListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicBaseVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicLexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$AdicionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$AdicionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$AndexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$AndexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ArgumentsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ArgumentsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$AssignmentexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$AssignmentexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$AssignmentoperatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$AssignmentoperatorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$BeginContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$BeginContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$CicloContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$CicloContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ConditionalexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ConditionalexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$DeclaracionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$DeclaracionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Declaracion_asignacionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Declaracion_asignacionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$DesicionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$DesicionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Do_whileContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Do_whileContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$EqualityexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$EqualityexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ExclusiveorexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ExclusiveorexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ExpresionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ExpresionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Expresion_decimalContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Expresion_decimalContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Expresion_enteraContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Expresion_enteraContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Expresion_logicaContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Expresion_logicaContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Expresion_matContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Expresion_matContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$FORContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$FORContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Function_declarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Function_declarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$GlobalThingsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$GlobalThingsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$InclusiveorexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$InclusiveorexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$IndexContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$IndexContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$LocalThingsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$LocalThingsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$LogicalandexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$LogicalandexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$LogicalorexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$LogicalorexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$MainContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$MainContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$MulriplicacionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$MulriplicacionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$NumeroContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$NumeroContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Post_operatorsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Post_operatorsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Pre_operatorsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Pre_operatorsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$PretipoContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$PretipoContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$RelationalexpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$RelationalexpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ShiftoperatorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$ShiftoperatorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$SimpleDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$SimpleDeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$StatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$StatementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$TiposContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$TiposContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Tipos_con_preContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Tipos_con_preContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Tipos_sin_preContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$Tipos_sin_preContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$VariablesContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$VariablesContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$WHILeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser$WHILeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/grammar/lengBasicVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/input/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/input/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proyecto final/proyecto final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proyecto final/proyecto final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyecto final.iml" beforeDir="false" afterPath="$PROJECT_DIR$/proyecto final.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FunPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FunPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Printer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Short_to_unicode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Short_to_unicode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/traductor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/traductor.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,45 +80,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="juan" />
-      </list>
-    </option>
-    <option name="PUSH_AUTO_UPDATE" value="true" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="C:\Users\juanda\IdeaProjects\proyecto final\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1VJliekKrlsn20i1aEybXOwx03k" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1XIj2rFS1SMl582IImUell51jYx" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -65,16 +102,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.traductor">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="proyecto final" />
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="traductor" />
       <option name="PROGRAM_PARAMETERS" value="input/input.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="traductor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="traductor" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="traductor" />
       <module name="proyecto final" />
       <option name="PROGRAM_PARAMETERS" value="input/input.txt" />
@@ -82,116 +118,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.traductor" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.traductor" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="efcfb719-f05d-4fd9-ae0a-9f090071869f" name="Default Changelist" comment="" />
-      <created>1576979207247</created>
+      <changelist id="8a301a7c-2210-4fd6-b00e-d722ef200672" name="Default Changelist" comment="" />
+      <created>1580740298323</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1576979207247</updated>
+      <updated>1580740298323</updated>
     </task>
-    <task id="LOCAL-00001" summary="add imports">
-      <created>1580490633031</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1580490633031</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add imports">
-      <created>1580535149308</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1580535149308</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add Function description Panel">
-      <created>1580618255577</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1580618255577</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add listeners">
-      <created>1580618952951</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1580618952951</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add Menu and var listeners">
-      <created>1580669967365</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1580669967365</updated>
-    </task>
-    <task id="LOCAL-00006" summary="commit hasta llamada">
-      <created>1580672677288</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1580672677288</updated>
-    </task>
-    <task id="LOCAL-00007" summary="abri metodos de comunicacion entre las variables y el traductor , corregi la gramatica respecto a las expresiones de return">
-      <created>1580679787247</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1580679787247</updated>
-    </task>
-    <task id="LOCAL-00008" summary="arregle la gramatica">
-      <created>1580681938878</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1580681938878</updated>
-    </task>
-    <task id="LOCAL-00009" summary="se agregan variables globales ala GUI">
-      <created>1580689186969</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1580689186970</updated>
-    </task>
-    <task id="LOCAL-00010" summary="se agregan arreglos ala GUI">
-      <created>1580709033443</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1580709033443</updated>
-    </task>
-    <task id="LOCAL-00011" summary="funciones al 100 en gui">
-      <created>1580723111340</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1580723111340</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Agregar paso a paso">
-      <created>1580737266816</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1580737266816</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,20 +144,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add imports" />
-    <MESSAGE value="add Function description Panel" />
-    <MESSAGE value="add listeners" />
-    <MESSAGE value="add Menu and var listeners" />
-    <MESSAGE value="commit hasta llamada" />
-    <MESSAGE value="abri metodos de comunicacion entre las variables y el traductor , corregi la gramatica respecto a las expresiones de return" />
-    <MESSAGE value="arregle la gramatica" />
-    <MESSAGE value="se agregan variables globales" />
-    <MESSAGE value="se agregan variables globales ala GUI" />
-    <MESSAGE value="se agregan arreglos ala GUI" />
-    <MESSAGE value="funciones al 100 en gui" />
-    <MESSAGE value="Agregar paso a paso" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregar paso a paso" />
   </component>
 </project>

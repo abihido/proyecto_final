@@ -1,4 +1,4 @@
-// Generated from C:/Users/juanda/IdeaProjects/proyecto final/grammar\lengBasic.g4 by ANTLR 4.7.2
+// Generated from C:/Users/alejo/proyecto_final/grammar\lengBasic.g4 by ANTLR 4.7.2
 package grammar;
 
 import org.antlr.v4.runtime.ParserRuleContext;
