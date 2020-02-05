@@ -79,7 +79,7 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
 
     @Override
     public T visitMain(lengBasicParser.MainContext ctx) {
-        dibujo.jPanel1.setOption(6,"");
+        dibujo.jPanel1.setOption(6,"",ctx.start.getLine());
         dibujo.Esperalo();
         return super.visitMain(ctx);
     }
@@ -112,7 +112,7 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
         ArrayList typesAux=new ArrayList();
         ArrayList argNamesAux= new ArrayList();
         String text;
-
+        System.out.println("se crea una funcion en la linea"+ ctx.ID().getSymbol().getLine());
 
         types.clear();
         argNames.clear();
@@ -148,7 +148,7 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
 
 
         dibujo.addFunction(ctx.getChild(1).getText(),ctx.getChild(0).getText(),typesAux,argNamesAux,ctx.getChild(5).getText());
-        dibujo.jPanel1.setOption(1,"Con el nombre "+ctx.getChild(1).getText());
+        dibujo.jPanel1.setOption(1,"Con el nombre "+ctx.getChild(1).getText(),ctx.ID().getSymbol().getLine());
         dibujo.Esperalo();
         return super.visitFunction_declaration(ctx);
     }
@@ -163,10 +163,10 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
             System.out.println(ctx.parent.getParent().toString());
             if (ctx.parent.getParent().toString().contains("[93]")) {//es global
                 dibujo.addVarGlobal(ctx.getChild(1).getText(), ctx.getChild(3).getText(), false,ctx.getChild(0).getText());
-                dibujo.jPanel1.setOption(2,ctx.getChild(1).getText()+"y se le da el valor de "+ctx.getChild(3).getText());
+                dibujo.jPanel1.setOption(2,ctx.getChild(1).getText()+"y se le da el valor de "+ctx.getChild(3).getText(),ctx.start.getLine());
             } else {
                 dibujo.addVarLocal(ctx.getChild(1).getText(), ctx.getChild(3).getText(), false,ctx.getChild(0).getText());
-                dibujo.jPanel1.setOption(2,ctx.getChild(1).getText()+" y se le da el valor de "+ctx.getChild(3).getText());
+                dibujo.jPanel1.setOption(2,ctx.getChild(1).getText()+" y se le da el valor de "+ctx.getChild(3).getText(),ctx.start.getLine());
             }
             dibujo.Esperalo();
         }
@@ -186,14 +186,14 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
                             System.out.println(ctx.getChild(1).getChild(i).getText()); //identificadores
                             dibujo.addVarGlobal(ctx.getChild(1).getChild(i).getText(), "", true,ctx.getChild(0).getText());
                         }
-                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText() + "[]");
+                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText() + "[]",ctx.start.getLine());
                         System.out.println(ctx.getChild(1).getChild(childes - 1).getChild(1).getText());//tamaño
                     } else {//SOLO DECLARA UNA
                         System.out.println(ctx.getChild(0).getText());//tipo
                         System.out.println(ctx.getChild(1).getChild(0).getText()); //identificadores
                         System.out.println(ctx.getChild(1).getChild(1).getChild(1).getText());//tamaño
                         dibujo.addVarGlobal(ctx.getChild(1).getChild(0).getText(), "", true,ctx.getChild(0).getText());
-                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText() + "[]");
+                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText() + "[]",ctx.start.getLine());
                     }
                 } else {//no es arreglo xd
                     if (ctx.getText().contains(",")) {//contiene varias variables
@@ -203,12 +203,12 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
                             System.out.println(ctx.getChild(1).getChild(i).getText());//identificadores
                             dibujo.addVarGlobal(ctx.getChild(1).getChild(i).getText(), "", false,ctx.getChild(0).getText());
                         }
-                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText());
+                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText(),ctx.start.getLine());
                     } else {
                         System.out.println(ctx.getChild(0).getText());//tipo
                         System.out.println(ctx.getChild(1).getText());//identificador
                         dibujo.addVarGlobal(ctx.getChild(1).getText(), "", false,ctx.getChild(0).getText());
-                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText());
+                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText(),ctx.start.getLine());
                     }
                 }
             } else {
@@ -220,14 +220,14 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
                             System.out.println(ctx.getChild(1).getChild(i).getText()); //identificadores
                             dibujo.addVarLocal(ctx.getChild(1).getChild(i).getText(), "", true,ctx.getChild(0).getText());
                         }
-                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText() + "[]");
+                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText() + "[]",ctx.start.getLine());
                         System.out.println(ctx.getChild(1).getChild(childes - 1).getChild(1).getText());//tamaño
                     } else {//SOLO DECLARA UNA
                         System.out.println(ctx.getChild(0).getText());//tipo
                         System.out.println(ctx.getChild(1).getChild(0).getText()); //identificadores
                         System.out.println(ctx.getChild(1).getChild(1).getChild(1).getText());//tamaño
                         dibujo.addVarLocal(ctx.getChild(1).getChild(0).getText(), "", true,ctx.getChild(0).getText());
-                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText() + "[]");
+                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText() + "[]",ctx.start.getLine());
                     }
                 } else {//no es arreglo xd
                     if (ctx.getText().contains(",")) {//contiene varias variables
@@ -237,12 +237,12 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
                             System.out.println(ctx.getChild(1).getChild(i).getText());//identificadores
                             dibujo.addVarLocal(ctx.getChild(1).getChild(i).getText(), "", false,ctx.getChild(0).getText());
                         }
-                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText());
+                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText(),ctx.start.getLine());
                     } else {
                         System.out.println(ctx.getChild(0).getText());//tipo
                         System.out.println(ctx.getChild(1).getText());//identificador
                         dibujo.addVarLocal(ctx.getChild(1).getText(), "", false,ctx.getChild(0).getText());
-                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText());
+                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText(),ctx.start.getLine());
                     }
                 }
             }
@@ -269,7 +269,6 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
     @Override
     public T visitDesicion(lengBasicParser.DesicionContext ctx) {
         String condition=ctx.getChild(2).getText();
-
         return super.visitDesicion(ctx);
     }
 
@@ -352,7 +351,7 @@ public class visitantes<T> extends lengBasicBaseVisitor<T> {
             System.out.println(ctx.getChild(2).getText());//valor
             dibujo.modifyVar(ctx.getChild(0).getText(),ctx.getChild(2).getText());
         }
-        dibujo.jPanel1.setOption(5,ctx.getChild(0).getText()+" El valor de "+ctx.getChild(2).getText());
+        dibujo.jPanel1.setOption(5,ctx.getChild(0).getText()+" El valor de "+ctx.getChild(2).getText(),ctx.start.getLine());
         dibujo.Esperalo();
         return super.visitAssignmentexpression(ctx);
     }

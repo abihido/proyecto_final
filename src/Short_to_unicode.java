@@ -39,7 +39,7 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitBegin(lengBasicParser.BeginContext ctx) {
-        dibujo.jPanel1.setOption(8,"gracias por usar el programa");
+
         dibujo.Esperalo();
     }
     /**
@@ -89,7 +89,6 @@ public class Short_to_unicode extends lengBasicBaseListener {
      */
     @Override public void enterMain(lengBasicParser.MainContext ctx) {
 
-        dibujo.jPanel1.setOption(6,"");
         dibujo.Esperalo();
     }
     /**
@@ -141,7 +140,6 @@ public class Short_to_unicode extends lengBasicBaseListener {
 
 
         dibujo.addFunction(ctx.getChild(1).getText(),ctx.getChild(0).getText(),typesAux,argNamesAux,ctx.getChild(5).getText());
-        dibujo.jPanel1.setOption(1,"Con el nombre "+ctx.getChild(1).getText());
         dibujo.Esperalo();
 
     }
@@ -171,10 +169,8 @@ public class Short_to_unicode extends lengBasicBaseListener {
             System.out.println(ctx.parent.getParent().toString());
             if (ctx.parent.getParent().toString().contains("[93]")) {//es global
                 dibujo.addVarGlobal(ctx.getChild(1).getText(), ctx.getChild(3).getText(), false,ctx.getChild(0).getText());
-                dibujo.jPanel1.setOption(2,ctx.getChild(1).getText()+"y se le da el valor de "+ctx.getChild(3).getText());
             } else {
                 dibujo.addVarLocal(ctx.getChild(1).getText(), ctx.getChild(3).getText(), false,ctx.getChild(0).getText());
-                dibujo.jPanel1.setOption(2,ctx.getChild(1).getText()+" y se le da el valor de "+ctx.getChild(3).getText());
             }
             dibujo.Esperalo();
         }
@@ -194,77 +190,8 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void exitSimpleDeclaration(lengBasicParser.SimpleDeclarationContext ctx) {
-        if (!ctx.toString().contains("146")) {
-            if (ctx.parent.getParent().toString().contains("[93]")) {
-                if (ctx.getText().contains("[")) {//es arreglo xd
-                    if (ctx.getText().contains(",")) {//contiene varias variables
-                        System.out.println(ctx.getChild(0).getText());//tipo
-                        int childes = ctx.getChild(1).getChildCount();
-                        for (int i = 0; i < childes - 1; i = i + 2) {
-                            System.out.println(ctx.getChild(1).getChild(i).getText()); //identificadores
-                            dibujo.addVarGlobal(ctx.getChild(1).getChild(i).getText(), "", true,ctx.getChild(0).getText());
-                        }
-                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText() + "[]");
-                        System.out.println(ctx.getChild(1).getChild(childes - 1).getChild(1).getText());//tamaño
-                    } else {//SOLO DECLARA UNA
-                        System.out.println(ctx.getChild(0).getText());//tipo
-                        System.out.println(ctx.getChild(1).getChild(0).getText()); //identificadores
-                        System.out.println(ctx.getChild(1).getChild(1).getChild(1).getText());//tamaño
-                        dibujo.addVarGlobal(ctx.getChild(1).getChild(0).getText(), "", true,ctx.getChild(0).getText());
-                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText() + "[]");
-                    }
-                } else {//no es arreglo xd
-                    if (ctx.getText().contains(",")) {//contiene varias variables
-                        System.out.println(ctx.getChild(0).getText());//tipo
-                        int variables = ctx.getChild(1).getChildCount();
-                        for (int i = 0; i < variables; i = i + 2) {
-                            System.out.println(ctx.getChild(1).getChild(i).getText());//identificadores
-                            dibujo.addVarGlobal(ctx.getChild(1).getChild(i).getText(), "", false,ctx.getChild(0).getText());
-                        }
-                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText());
-                    } else {
-                        System.out.println(ctx.getChild(0).getText());//tipo
-                        System.out.println(ctx.getChild(1).getText());//identificador
-                        dibujo.addVarGlobal(ctx.getChild(1).getText(), "", false,ctx.getChild(0).getText());
-                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText());
-                    }
-                }
-            } else {
-                if (ctx.getText().contains("[")) {//es arreglo xd
-                    if (ctx.getText().contains(",")) {//contiene varias variables
-                        System.out.println(ctx.getChild(0).getText());//tipo
-                        int childes = ctx.getChild(1).getChildCount();
-                        for (int i = 0; i < childes - 1; i = i + 2) {
-                            System.out.println(ctx.getChild(1).getChild(i).getText()); //identificadores
-                            dibujo.addVarLocal(ctx.getChild(1).getChild(i).getText(), "", true,ctx.getChild(0).getText());
-                        }
-                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText() + "[]");
-                        System.out.println(ctx.getChild(1).getChild(childes - 1).getChild(1).getText());//tamaño
-                    } else {//SOLO DECLARA UNA
-                        System.out.println(ctx.getChild(0).getText());//tipo
-                        System.out.println(ctx.getChild(1).getChild(0).getText()); //identificadores
-                        System.out.println(ctx.getChild(1).getChild(1).getChild(1).getText());//tamaño
-                        dibujo.addVarLocal(ctx.getChild(1).getChild(0).getText(), "", true,ctx.getChild(0).getText());
-                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText() + "[]");
-                    }
-                } else {//no es arreglo xd
-                    if (ctx.getText().contains(",")) {//contiene varias variables
-                        System.out.println(ctx.getChild(0).getText());//tipo
-                        int variables = ctx.getChild(1).getChildCount();
-                        for (int i = 0; i < variables; i = i + 2) {
-                            System.out.println(ctx.getChild(1).getChild(i).getText());//identificadores
-                            dibujo.addVarLocal(ctx.getChild(1).getChild(i).getText(), "", false,ctx.getChild(0).getText());
-                        }
-                        dibujo.jPanel1.setOption(3, "con los nombres " + ctx.getChild(1).getText());
-                    } else {
-                        System.out.println(ctx.getChild(0).getText());//tipo
-                        System.out.println(ctx.getChild(1).getText());//identificador
-                        dibujo.addVarLocal(ctx.getChild(1).getText(), "", false,ctx.getChild(0).getText());
-                        dibujo.jPanel1.setOption(2, "con el nombre " + ctx.getChild(1).getChild(0).getText());
-                    }
-                }
-            }
-        }
+
+
         dibujo.Esperalo();
     }
 
@@ -382,8 +309,7 @@ public class Short_to_unicode extends lengBasicBaseListener {
      * <p>The default implementation does nothing.</p>
      */
     @Override public void enterAssignmentexpression(lengBasicParser.AssignmentexpressionContext ctx) {
-        System.out.println("esta en la linea: "+Linea);
-        Linea++;
+
     }
     /**
      * {@inheritDoc}
@@ -432,8 +358,6 @@ public class Short_to_unicode extends lengBasicBaseListener {
             System.out.println(ctx.getChild(2).getText());//valor
             dibujo.modifyVar(ctx.getChild(0).getText(),ctx.getChild(2).getText());
         }
-        dibujo.jPanel1.setOption(5,ctx.getChild(0).getText()+" El valor de "+ctx.getChild(2).getText());
-        dibujo.Esperalo();
     }
     /**
      * {@inheritDoc}

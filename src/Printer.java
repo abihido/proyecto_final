@@ -196,31 +196,33 @@ class Descritor extends JPanel {
 
     String Instruccion,Nombre1;
     int option;
+    int Linea;
     public Descritor(){
 
     }
-    void setOption(int i ,String nombre1){
+    void setOption(int i ,String nombre1, int linea){
         option=i;
         Nombre1=nombre1;
+        Linea=linea;
         updateUI();
     }
     void CreateFunction(Graphics g){
-        Instruccion="SE CREA LA FUNCION";
+        Instruccion="EN LA LINEA "+Linea+" SE CREA LA FUNCION";
     }
     void CreateVariable(Graphics g){
-        Instruccion="SE CREA LA VARIABLE";
+        Instruccion="EN LA LINEA "+Linea+" SE CREA LA VARIABLE";
     }
     void CreateVariables(Graphics g){
-        Instruccion="SE CREAN LAS VARIABLES";
+        Instruccion="EN LA LINEA "+Linea+" SE CREAN LAS VARIABLES";
     }
     void CreateAndAssing(Graphics g){
-        Instruccion="SE CREA LA VARIABLE";
+        Instruccion="EN LA LINEA "+Linea+" SE CREA LA VARIABLE";
     }
     void Assing(Graphics g){
-        Instruccion="SE LE ASIGNA A LA VARIABLE";
+        Instruccion="EN LA LINEA "+Linea+" SE LE ASIGNA A LA VARIABLE";
     }
     void EnterToMain(Graphics g){
-        Instruccion="ENTRAMOS AL MAIN";
+        Instruccion="EN LA LINEA "+Linea+" ENTRAMOS AL MAIN";
     }
     void Conditional(Graphics g){Instruccion="REALIZAMOS UNA COMPARACION";}
     void Final(Graphics g){Instruccion="Y ACABAMOS...";}
@@ -248,14 +250,14 @@ class Descritor extends JPanel {
             case 7:Conditional(g);break;
             case 8:Final(g);break;
         }
-        g.setFont(new Font("Arial",Font.BOLD,35));
+        g.setFont(new Font("Arial",Font.BOLD,25));
         g.setColor(Color.black);
-        int x= (getWidth()-Instruccion.length()*20)/2 ;
+        int x= (getWidth()-(Instruccion.length())*15)/2 ;
         g.drawString(Instruccion,x,200);
-        g.setFont(new Font("Arial",Font.BOLD,20));
+        g.setFont(new Font("Arial",Font.BOLD,15));
         try {
-            x = (getWidth() - Nombre1.length() * 15) / 2;
-            g.drawString(Nombre1, x, 300);
+            x = (getWidth() - (Nombre1.length())*10) / 2;
+            g.drawString(Nombre1, x, 250);
         }
         catch (Exception ex){
 
